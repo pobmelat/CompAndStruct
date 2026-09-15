@@ -1,0 +1,22 @@
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.xdv
+
+# Local editor and macOS files
+.DS_Store
+
+# Internal analysis files
+*.tsv
+*.xlsx
+*.md
+econ_notes.tex
+NOTES_TO_KEEP_IN_MIND.md
+REVIEW_CONTENT_*.md

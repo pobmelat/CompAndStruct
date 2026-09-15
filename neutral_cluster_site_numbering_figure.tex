@@ -1,0 +1,86 @@
+\begin{tikzpicture}[
+  x=1cm,
+  y=1cm,
+  panel/.style={font=\sffamily\small, anchor=north west, fill=white,
+    fill opacity=0.90, text opacity=1, inner sep=2pt},
+  title/.style={font=\sffamily\small, align=center},
+  note/.style={font=\sffamily\scriptsize, align=center, text=black!70},
+  sitelabel/.style={draw=black,
+	  circle, fill=white, line width=0.5pt,
+	  draw=none,
+	  draw opacity=1,
+	  fill opacity=0.05,
+      text opacity=0.5,
+      minimum size=4.8mm, inner sep=0pt, font=\sffamily\bfseries\scriptsize
+}
+]
+
+% Layout controls.
+\def\imgw{0.265\linewidth}
+\def\leftx{-3.45}
+\def\rightx{3.45}
+\def\topy{2.45}
+\def\bottomy{-2.75}
+\def\titleshift{-2.05cm}
+
+% Bare crossed-parent models.
+\node[inner sep=0pt] (pt10cross) at (\leftx,\topy)
+  {\includegraphics[width=\imgw]{Pt10CO/pt10_ref.png}};
+\node[inner sep=0pt] (pt6ge4cross) at (\rightx,\topy)
+  {\includegraphics[width=\imgw]{pt6ge4.png}};
+\node[inner sep=0pt] (pt5ge5cross) at (\leftx,\bottomy)
+  {\includegraphics[width=\imgw]{Pt5Ge5_fromPt10Parent.png}};
+\node[inner sep=0pt] (pt4ge6cross) at (\rightx,\bottomy)
+  {\includegraphics[width=\imgw]{pt4ge6.png}};
+
+% Panel markers.
+\node[panel] at ([xshift=-1.60cm,yshift=1.52cm]pt10cross.center) {(a)};
+\node[panel] at ([xshift=-1.60cm,yshift=1.52cm]pt6ge4cross.center) {(b)};
+\node[panel] at ([xshift=-1.60cm,yshift=1.52cm]pt5ge5cross.center) {(c)};
+\node[panel] at ([xshift=-1.60cm,yshift=1.52cm]pt4ge6cross.center) {(d)};
+
+% Model labels.
+\node[title] at ([yshift=\titleshift]pt10cross.center)
+  {\ce{Pt10} from \ce{Pt5Ge5}};
+\node[title] at ([yshift=\titleshift]pt6ge4cross.center)
+  {\ce{Pt6Ge4} from \ce{Pt10}};
+\node[title] at ([yshift=\titleshift]pt5ge5cross.center)
+  {\ce{Pt5Ge5} from \ce{Pt10}};
+\node[title] at ([yshift=\titleshift]pt4ge6cross.center)
+  {\ce{Pt4Ge6} from \ce{Pt10}};
+
+% Pt10 site numbers.
+\node[sitelabel] at ([xshift=-.10cm,yshift=-0.02cm]pt10cross.center) {1};
+\node[sitelabel] at ([xshift=0.54cm,yshift=0.98cm]pt10cross.center) {3};
+\node[sitelabel] at ([xshift=1.15cm,yshift=-0.25cm]pt10cross.center) {4};
+\node[sitelabel] at ([xshift=1.18cm,yshift=0.33cm]pt10cross.center) {2};
+\node[sitelabel] at ([xshift=-0.39cm,yshift=1.26cm]pt10cross.center) {10};
+\node[sitelabel] at ([xshift=-1.30cm,yshift=0.66cm]pt10cross.center) {8};
+\node[sitelabel] at ([xshift=-1.21cm,yshift=-0.33cm]pt10cross.center) {7};
+\node[sitelabel] at ([xshift=-.53cm,yshift=-1.27cm]pt10cross.center) {6};
+\node[sitelabel] at ([xshift=.66cm,yshift=-0.90cm]pt10cross.center) {5};
+\node[sitelabel] at ([xshift=.12cm,yshift=.57cm]pt10cross.center) {9};
+
+% Pt6Ge4 representative adsorption-site classes. Positions are tied to the
+% selected Jmol view and can be fine-tuned independently.
+\node[sitelabel] at ([xshift=-0.83cm,yshift=0.30cm]pt6ge4cross.center) {1};
+\node[sitelabel] at ([xshift=-0.03cm,yshift=0.27cm]pt6ge4cross.center) {2};
+\node[sitelabel] at ([xshift=0.82cm,yshift=0.32cm]pt6ge4cross.center) {4};
+\node[sitelabel] at ([xshift=-0.02cm,yshift=-1.05cm]pt6ge4cross.center) {9};
+\node[sitelabel] at ([xshift=-0.92cm,yshift=-1.1cm]pt6ge4cross.center) {7};
+\node[sitelabel] at ([xshift=1.02cm,yshift=-1.05cm]pt6ge4cross.center) {5};
+
+% Pt5Ge5 site-class numbers.
+\node[sitelabel] at ([xshift=-.80cm,yshift=.30cm]pt5ge5cross.center) {6};
+\node[sitelabel] at ([xshift=.68cm,yshift=.30cm]pt5ge5cross.center) {8};
+\node[sitelabel] at ([xshift=-0.1cm,yshift=0.0cm]pt5ge5cross.center) {4};
+\node[sitelabel] at ([xshift=-0.96cm,yshift=-0.85cm]pt5ge5cross.center) {7};
+\node[sitelabel] at ([xshift=0.82cm,yshift=-0.85cm]pt5ge5cross.center) {10};
+
+% Pt4Ge6 adsorption sites.
+\node[sitelabel] at ([xshift=-0.80cm,yshift=0.39cm]pt4ge6cross.center) {1};
+\node[sitelabel] at ([xshift=0.68cm,yshift=0.39cm]pt4ge6cross.center) {2};
+\node[sitelabel] at ([xshift=-0.42cm,yshift=-0.46cm]pt4ge6cross.center) {5};
+\node[sitelabel] at ([xshift=0.17cm,yshift=-1.08cm]pt4ge6cross.center) {7};
+
+\end{tikzpicture}

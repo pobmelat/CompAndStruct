@@ -1,0 +1,63 @@
+\begin{tikzpicture}[
+  x=1cm,
+  y=1cm,
+  route/.style={font=\sffamily\bfseries\large, align=center},
+  note/.style={font=\sffamily\small, align=center, text=black!70},
+  molname/.style={font=\sffamily\bfseries\small, align=center},
+  molnote/.style={font=\sffamily\scriptsize, align=center, text=black!70},
+  arrow/.style={->, >=stealth, line width=0.7pt, black!85}
+]
+
+% Image sizes.  These are intentionally defined here so the layout can be
+% adjusted directly from LaTeX.
+\def\parentw{0.19\linewidth}
+\def\parentwide{0.17\linewidth}
+\def\molw{0.15\linewidth}
+\def\molwb{0.15\linewidth}
+
+% Molecule images.  Draw these first because the PNGs have white backgrounds.
+\node[inner sep=0pt] (pt10parent) at (-3.30,2.75)
+  {\includegraphics[width=\parentw]{pt10.png}};
+\node[inner sep=0pt] (pt5ge5parent) at (3.45,2.75)
+  {\includegraphics[width=\parentwide]{pt5ge5_orig.png}};
+
+\node[inner sep=0pt] (pt6ge4) at (-5.15,-0.10)
+  {\includegraphics[width=\molw]{pt6ge4.png}};
+\node[inner sep=0pt] (pt5ge5) at (-3.25,-0.10)
+  {\includegraphics[width=\molw]{Pt5Ge5_fromPt10Parent.png}};
+\node[inner sep=0pt] (pt4ge6) at (-1.15,-0.10)
+  {\includegraphics[width=\molw]{pt4ge6.png}};
+\node[inner sep=0pt] (pt10frompt5ge5) at (3.45,-0.10)
+  {\includegraphics[width=\molwb]{pt10_from_pt5ge5.png}};
+
+% Route arrows.
+\draw[arrow] (-3.82,1.18) -- (-4.90,0.80);
+\draw[arrow] (-3.30,1.18) -- (-3.25,0.82);
+\draw[arrow] (-2.78,1.18) -- (-1.55,0.80);
+\draw[arrow] (3.45,1.18) -- (3.45,0.85);
+
+% Headers and labels.  Draw these last so they remain visible over the PNG
+% image boxes.
+\node[route] at (-3.30,4.58) {\ce{Pt10} parent framework};
+\node[note] at (-3.30,4.16) {Ge substitution followed by optimization};
+\node[route] at (3.45,4.58) {\ce{Pt5Ge5} parent framework};
+\node[note] at (3.45,4.16) {Ge-to-Pt substitution followed by optimization};
+
+\node[molname] at (-3.30,1.62) {\ce{Pt10} parent};
+\node[molnote] at (-3.30,1.29) {reported framework};
+\node[molname] at (3.45,1.62) {\ce{Pt5Ge5} parent};
+\node[molnote] at (3.45,1.29) {reported framework};
+
+\node[molname] at (-5.15,-1.18) {\ce{Pt6Ge4}};
+\node[molnote] at (-5.15,-1.51) {from \ce{Pt10}};
+\node[molname] at (-3.25,-1.18) {\ce{Pt5Ge5}};
+\node[molnote] at (-3.25,-1.51) {from \ce{Pt10}};
+\node[molname] at (-1.35,-1.18) {\ce{Pt4Ge6}};
+\node[molnote] at (-1.35,-1.51) {from \ce{Pt10}};
+\node[molname] at (3.45,-1.18) {\ce{Pt10}};
+\node[molnote] at (3.45,-1.51) {from \ce{Pt5Ge5}};
+
+\node[note] at (-0.70,-2.22)
+  {Upper row: reported parent frameworks. Lower row: optimized crossed-parent derivatives.};
+
+\end{tikzpicture}

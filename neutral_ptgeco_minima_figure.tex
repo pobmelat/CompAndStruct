@@ -1,0 +1,85 @@
+\begin{tikzpicture}[
+  x=1cm,
+  y=1cm,
+  structure/.style={inner sep=0pt},
+  rowlabel/.style={font=\sffamily\small\bfseries, align=center},
+  sitelabel/.style={font=\sffamily\scriptsize, align=center},
+  datalabel/.style={font=\sffamily\tiny, align=center, text=black!75}
+]
+
+% Global layout controls.
+\def\molwA{0.17\linewidth}
+\def\molwB{0.13\linewidth}
+\def\molwC{0.15\linewidth}
+\def\molw{0.215\linewidth}
+\def\rowone{3.55}
+\def\rowtwo{0.00}
+\def\rowthree{-3.55}
+\def\xone{-4.65}
+\def\xtwo{-1.55}
+\def\xthree{1.55}
+\def\xfour{4.65}
+\def\xmidleft{-3.10}
+\def\xmid{0.00}
+\def\xmidright{3.10}
+\def\labelshift{-1.47cm}
+\def\datashift{-1.73cm}
+
+% Pt6Ge4CO adsorption sites.
+\node[structure] (p6g4s1) at (\xone,\rowone)
+  {\includegraphics[width=\molwB]{pt6ge4_site01.png}};
+\node[structure] (p6g4s2) at (\xtwo,\rowone)
+  {\includegraphics[width=\molwB]{pt6ge4_site02.png}};
+\node[structure] (p6g4s7) at (\xthree,\rowone)
+  {\includegraphics[width=\molwA]{pt6ge4_site07.png}};
+\node[structure] (p6g4s9) at (\xfour,\rowone)
+  {\includegraphics[width=\molwA]{pt6ge4_site09.png}};
+
+\node[rowlabel] at (0,{\rowone+1.48}) {\ce{Pt6Ge4CO}};
+\node[sitelabel] at ([yshift=\labelshift]p6g4s1.center) {Site 1/4};
+\node[datalabel] at ([yshift=\datashift]p6g4s1.center) {$-2.235$ eV};
+\node[sitelabel] at ([yshift=\labelshift]p6g4s2.center) {Site 2};
+\node[datalabel] at ([yshift=\datashift]p6g4s2.center) {$-2.246$ eV};
+\node[sitelabel] at ([yshift=\labelshift]p6g4s7.center) {Site 5/7};
+\node[datalabel] at ([yshift=\datashift]p6g4s7.center) {$-1.567$ eV};
+\node[sitelabel] at ([yshift=\labelshift]p6g4s9.center) {Site 9};
+\node[datalabel] at ([yshift=\datashift]p6g4s9.center) {$-2.245$ eV};
+
+% Pt5Ge5CO adsorption-site classes. Parent-Pt indices are retained; paired
+% labels denote equivalent sites represented by the same optimized structure.
+\node[structure] (p5g5s1) at (\xmidleft,\rowtwo)
+  {\includegraphics[width=\molw]{Pt5Ge5CO/pt5ge5_1_from_1xyz.png}};
+\node[structure] (p5g5s2) at (\xmid,\rowtwo)
+  {\includegraphics[width=\molw]{Pt5Ge5CO/Pt5Ge5_2_from_2xyzUnai.png}};
+\node[structure] (p5g5s3) at (\xmidright,\rowtwo)
+  {\includegraphics[width=\molw]{Pt5Ge5CO/Pt5Ge5_3_from_3xyzUnai.png}};
+
+\node[rowlabel] at (0,{\rowtwo+1.48}) {\ce{Pt5Ge5CO}};
+\node[sitelabel] at ([yshift=\labelshift]p5g5s1.center) {Sites 6/8};
+\node[datalabel] at ([yshift=\datashift]p5g5s1.center) {$-2.076$ eV};
+\node[sitelabel] at ([yshift=\labelshift]p5g5s2.center) {Sites 7/10};
+\node[datalabel] at ([yshift=\datashift]p5g5s2.center) {$-1.661$ eV};
+\node[sitelabel] at ([yshift=\labelshift]p5g5s3.center) {Site 4};
+\node[datalabel] at ([yshift=\datashift]p5g5s3.center) {$-1.342$ eV};
+
+% Pt4Ge6CO adsorption sites.
+\node[structure] (p4g6s1) at (\xone,\rowthree)
+  {\includegraphics[width=\molwC]{pt4ge6_site01.png}};
+\node[structure] (p4g6s2) at (\xtwo,\rowthree)
+  {\includegraphics[width=\molwB]{pt4ge6_site02.png}};
+\node[structure] (p4g6s5) at (\xthree,\rowthree)
+  {\includegraphics[width=\molwB]{pt4ge6_site05.png}};
+\node[structure] (p4g6s7) at (\xfour,\rowthree)
+  {\includegraphics[width=\molwC]{pt4ge6_site07.png}};
+
+\node[rowlabel] at (0,{\rowthree+1.48}) {\ce{Pt4Ge6CO}};
+\node[sitelabel] at ([yshift=\labelshift]p4g6s1.center) {Site 1};
+\node[datalabel] at ([yshift=\datashift]p4g6s1.center) {$-1.052$ eV};
+\node[sitelabel] at ([yshift=\labelshift]p4g6s2.center) {Site 2};
+\node[datalabel] at ([yshift=\datashift]p4g6s2.center) {$-1.305$ eV};
+\node[sitelabel] at ([yshift=\labelshift]p4g6s5.center) {Site 5};
+\node[datalabel] at ([yshift=\datashift]p4g6s5.center) {$-1.459$ eV};
+\node[sitelabel] at ([yshift=\labelshift]p4g6s7.center) {Site 7};
+\node[datalabel] at ([yshift=\datashift]p4g6s7.center) {$-1.458$ eV};
+
+\end{tikzpicture}

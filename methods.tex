@@ -1,0 +1,69 @@
+All cluster calculations were performed with Gaussian~16\cite{g16}
+using the PBE exchange--correlation functional (PBEPBE).\cite{perdew:pbe:1996}
+A def2-TZVP basis was used for C, O, and Ge,\cite{weigend:def2:2005}
+and Pt was described with the corresponding Karlsruhe valence basis and a
+60-electron effective core potential.\cite{andrae:epp:1990,weigend:def2:2005}
+This leaves 18 explicit Pt electrons.
+Geometry optimizations and harmonic
+frequency calculations were carried out for the bare clusters, carbonyl
+complexes, and free \ce{CO}. All structures retained in the adsorption
+analysis were confirmed as minima by the absence of imaginary frequencies.
+Orbital stability was tested for the selected triplet
+\ce{Pt10} solution and for the seven distinct triplet \ce{Pt10CO} minima
+obtained after placing \ce{CO} at Pt sites.
+All these wavefunctions were stable under the
+perturbations considered.
+
+The structural families used in the adsorption study are summarized in
+Figure~\ref{fig:neutral_data_sets}. For the crossed-parent models, the spin
+states were optimized separately before \ce{CO} adsorption was considered.
+The \ce{Pt6Ge4}, \ce{Pt5Ge5}, and \ce{Pt4Ge6} structures were generated from
+the reported global-minimum \ce{Pt10} framework.\cite{ugartemendia:2022} In the reverse route, the
+triplet \ce{Pt10} structure was generated from the reported global-minimum
+\ce{Pt5Ge5} framework. The reported global-minimum structure of each
+composition was also reoptimized at the same level and used in a separate
+comparison set.
+
+\begin{figure}[H]
+\centering
+\input{neutral_data_sets_scheme}
+\caption{Organization of the two cluster data sets used for the
+\ce{CO}-adsorption analysis. The crossed-parent set contains the
+\ce{Pt10}-to-\ce{Pt_{x}Ge_{10-x}} composition sequence and the reverse
+\ce{Pt5Ge5}-to-\ce{Pt10} route. Calculations initiated from the reported
+global-minimum structures show how the results change with the parent isomer
+and spin state. Both sets follow the same adsorption protocol.}
+\label{fig:neutral_data_sets}
+\end{figure}
+
+For this DFT series, the reported relative energies and \ce{CO}
+binding energies include the harmonic zero-point vibrational energy (ZPVE).
+Hereafter, ``carbonyl'' denotes the optimized cluster--\ce{CO} complex. We define
+\begin{align}
+E_0(X) &= E_{\rm elec}(X)+\mathrm{ZPVE}(X),\\
+BE(\ce{CO}) &= E_0(\mathrm{carbonyl})
+              -E_0(\mathrm{bare\ cluster})-E_0(\ce{CO}).
+\label{eq:neutral_dft_be}
+\end{align}
+Thus, more negative values correspond to stronger adsorption.
+Unless stated otherwise, each binding energy is referenced to free singlet
+\ce{CO} and to the optimized bare cluster with the same parent framework and
+multiplicity as the corresponding carbonyl.
+
+The bonding patterns were analyzed with AdNDP~2.0\cite{tkachenko:adndp2:2019}.
+The AdNDP searches included the chemically active valence space, with 10
+electrons per Pt atom and four per Ge atom. The Pt 5s and 5p semicore orbitals
+retained by the ECP were treated as core orbitals.
+For the triplet \ce{Pt10}, the alpha and beta density matrices were analyzed
+independently. Elements involving the same atomic centers in both spin
+channels were paired when possible. The spin-resolved elements and their
+occupations are reported in Supporting
+Table~\ref{tab:tfg_adndp_summary}.
+
+For selected strongly and weakly bound carbonyl minima of \ce{Pt10},
+\ce{Pt6Ge4}, \ce{Pt5Ge5}, and \ce{Pt4Ge6}, interaction and
+fragment-reorganization terms were evaluated from electronic single-point
+energies. The bare-cluster and \ce{CO} fragments were calculated both in their
+isolated optimized geometries and at the coordinates they adopt in the
+optimized carbonyl complex. The ZPVE correction was added only after this
+electronic decomposition, to obtain the final binding energy.

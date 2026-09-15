@@ -1,0 +1,56 @@
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.92\linewidth,
+  height=0.68\linewidth,
+  xlabel={$ECoN_{\rm Pt}$},
+  ylabel={$x_{\rm Ge}^{\rm ECoN}$},
+  xmin=-0.15, xmax=2.65,
+  ymin=0.35, ymax=1.06,
+  grid=both,
+  minor grid style={gray!12},
+  major grid style={gray!25},
+  tick label style={font=\small},
+  label style={font=\small},
+  legend style={font=\small, at={(0.02,0.98)}, anchor=north west},
+  colorbar,
+  colorbar style={ylabel={$BE$ / eV}, yticklabel style={/pgf/number format/fixed}},
+  point meta min=-2.25,
+  point meta max=-1.30,
+  colormap/viridis,
+  scatter/use mapped color={draw=mapped color, fill=mapped color},
+  visualization depends on={value \thisrow{site} \as \site},
+  nodes near coords={\site},
+  every node near coord/.append style={font=\scriptsize, anchor=south west, inner sep=1pt},
+]
+\addplot[only marks, mark=square*, mark size=2.5pt, scatter,
+  scatter src=explicit, scatter/use mapped color={draw=mapped color, fill=mapped color}]
+  table[x=pt, y=xge, meta=be, row sep=\\] {
+  pt site xge be\\
+  1.774 2   0.409 -2.246\\
+  1.163 9   0.614 -2.245\\
+  2.425 {1/4} 0.436 -2.235\\
+  0.657 {5/7} 0.771 -1.567\\
+};
+\addlegendentry{$\ce{Pt6Ge4CO}$}
+
+\addplot[only marks, mark=triangle*, mark size=2.8pt, scatter,
+  scatter src=explicit, scatter/use mapped color={draw=mapped color, fill=mapped color}]
+  table[x=pt, y=xge, meta=be, row sep=\\] {
+  pt site xge be\\
+  1.688 {6/8} 0.703 -2.076\\
+  0.937 {7/10} 0.683 -1.661\\
+  0.000 4   1.000 -1.342\\
+};
+\addlegendentry{$\ce{Pt5Ge5CO}$}
+
+\addplot[only marks, mark=diamond*, mark size=2.8pt, scatter,
+  scatter src=explicit, scatter/use mapped color={draw=mapped color, fill=mapped color}]
+  table[x=pt, y=xge, meta=be, row sep=\\] {
+  pt site xge be\\
+  0.686 {5/7} 0.825 -1.459\\
+  0.134 2   0.958 -1.305\\
+  1.423 1   0.759 -1.052\\
+};
+\addlegendentry{$\ce{Pt4Ge6CO}$}
+\end{axis}
+\end{tikzpicture}

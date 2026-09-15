@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+\usepackage[super,sort&compress,comma]{natbib} 
+%\usepackage{natbib}
+\usepackage[version=3]{mhchem}
+\usepackage[left=2.3cm, right=3cm, top=1.785cm, bottom=2.0cm]{geometry}
+\usepackage{graphicx} 
+\usepackage[format=plain,justification=justified,singlelinecheck=false,font={stretch=1.125,sf},labelfont=bf,labelsep=space]{caption}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{threeparttable}
+\usepackage{tablefootnote}
+\usepackage{longtable}
+\usepackage{hhline}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{multicol,caption,listings}
+\usepackage{authblk}
+\usepackage{float} 
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{compat=1.18}
+
+\usepackage{siunitx}
+\DeclareSIUnit\angstromunit{\text{\AA}}
+\sisetup{
+  round-mode = places,
+  %round-precision = 7
+}
+
+%%::::::::::::::: COLOR TEXT:::::::::::::::::::::::::::::::::::::
+\newcommand{\itblue}[1]{\textcolor{blue}{\textit{#1}}}
+\newcommand{\blue}[1]{{\color{blue}#1\color{black}}}
+\newcommand{\red}[1]{{\color{red}#1\color{black}}}
+
+%HIDE column
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+
+\onehalfspacing{}
+
+\newlength\Colsep
+\setlength\Colsep{10pt}
+\newcommand{\txe}[1]{{\color{red}#1\color{black}}}
+\hyphenation{con-tri-bu-tion con-fi-gu-ra-tion
+ex-pe-ri-men-tal me-a-su-ra-ble a-vo-ga-dro}
+%%:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+%%::::::::::::    BEGIN DOCUMENT    :::::::::::::::::::::::::::::
+%%:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+%\author{Rafael Grande-Aztatzi$^{*}$, , Jesus M. Ugalde and Jose M. Mercero$^{*}$}
+
+%
+\title{Composition and Structural Effects on CO Binding in \ce{Pt10} and Pt--Ge Clusters}
+
+\author[1,2,3]{Andoni Ugartemendia}
+%\author[1,2]{Sílvia Escayola}
+\author[1,2]{Idoia}
+\author[1,2]{Ramon}
+\author[1,2,$^*$]{Elisa Jimenez-Izal}
+\author[1,2,$^*$]{Jose M. Mercero }
+\affil[1]{\small Donostia International Physics Center (DIPC), 20018 Donostia, Euskadi, Spain}
+\affil[2]{\small Kimika Fakultatea, Euskal Herriko Unibertsitatea (UPV/EHU), P.K. 1072, 20080 Donostia, Euskadi, Spain}
+%\affil[4]{\small IKERBASQUE, Basque Foundation for Science, 48013 Bilbao, Euskadi, Spain}
+%\affil[5]{\small  Escuela de Ingeniería y Ciencias, Tecnológico de Monterrey, Av. Eugenio Garza Sada 2501, 64849 Monterrey, Nuevo León, México.}
+
+
+\graphicspath{{Figures/}}
+
+\begin{document}	
+\maketitle
+
+%\section{Abstract}
+\input{abstract}
+
+\section{Introduction}
+\input{intro}
+\section{Methods}
+\input{methods.tex}
+
+
+\section{Results and discussion}
+\input{neutral_cluster_models}
+\input{neutral_cluster_adsorption}
+
+\section{Conclusions}
+\input{conclusions}
+
+\section*{Acknowledgements}
+
+This work was supported by Grant No. PID2023--152377OB-I00, funded by
+MCIN/AEI/10.13039/501100011033, and by Gobierno Vasco-Eusko Jaurlaritza
+(Grant No. IT2067--26). We acknowledge DIPC and SGI-IZO-SGIker (UPV/EHU) for
+the allocation of computational resources. We also acknowledge the computer
+resources at MareNostrum and the technical support provided by the Barcelona
+Supercomputing Center (Grant No. QHS-2026--1--0028).
+
+%\section{Bibliography}
+\bibliography{refs,bib}
+\bibliographystyle{rsc}
+%\bibliographystyle{rsc} %the RSC$^'$s .bst file
+
+\clearpage
+\section{Supporting Information}
+\input{supporting}
+
+\end{document}

@@ -1,0 +1,54 @@
+\begin{tikzpicture}[
+  x=1cm,
+  y=1cm,
+  structure/.style={inner sep=0pt},
+  sitelabel/.style={font=\sffamily\scriptsize, align=center},
+  datalabel/.style={font=\sffamily\tiny, align=center, text=black!75}
+]
+
+% Global layout controls.
+\def\molw{0.22\linewidth}
+\def\rowone{1.75}
+\def\rowtwo{-1.75}
+\def\xone{-4.35}
+\def\xtwo{-1.45}
+\def\xthree{1.45}
+\def\xfour{4.35}
+\def\labelshift{-1.48cm}
+\def\datashift{-1.77cm}
+
+% Seven unique minima obtained from the ten original TFG starting sites.
+\node[structure] (site1) at (\xone,\rowone)
+  {\includegraphics[width=\molw]{Pt10CO/Pt1_from_1xyzUnai.png}};
+\node[structure] (site2) at (\xtwo,\rowone)
+  {\includegraphics[width=\molw]{Pt10CO/Pt2_from_2xyzUnai.png}};
+\node[structure] (site5) at (\xthree,\rowone)
+  {\includegraphics[width=\molw]{Pt10CO/Pt5_from_5xyzUnai.png}};
+\node[structure] (site4) at (\xfour,\rowone)
+  {\includegraphics[width=\molw]{Pt10CO/pt4_from_4xyzUnai.png}};
+
+\node[structure] (site6) at (-4.0,\rowtwo)
+  {\includegraphics[width=\molw]{Pt10CO/Pt6_from_6xyzUnai.png}};
+\node[structure] (site7) at (0,\rowtwo)
+  {\includegraphics[width=\molw]{Pt10CO/Pt7_from_7xyzUnai.png}};
+\node[structure] (site8) at (4.0,\rowtwo)
+  {\includegraphics[width=\molw]{Pt10CO/Pt8_from_8xyzUnai.png}};
+
+% Starting-site labels and binding energies of the final minima.
+\node[sitelabel] at ([yshift=\labelshift]site1.center) {Sites 1/9};
+\node[datalabel] at ([yshift=\datashift]site1.center) {$-2.156$ eV};
+\node[sitelabel] at ([yshift=\labelshift]site2.center) {Site 2};
+\node[datalabel] at ([yshift=\datashift]site2.center) {$-2.493$ eV};
+\node[sitelabel] at ([yshift=\labelshift]site5.center) {Sites 3/5};
+\node[datalabel] at ([yshift=\datashift]site5.center) {$-2.590$ eV};
+\node[sitelabel] at ([yshift=\labelshift]site4.center) {Site 4};
+\node[datalabel] at ([yshift=\datashift]site4.center) {$-2.579$ eV};
+
+\node[sitelabel] at ([yshift=\labelshift]site6.center) {Site 6};
+\node[datalabel] at ([yshift=\datashift]site6.center) {$-2.657$ eV};
+\node[sitelabel] at ([yshift=\labelshift]site7.center) {Site 7};
+\node[datalabel] at ([yshift=\datashift]site7.center) {$-2.493$ eV};
+\node[sitelabel] at ([yshift=\labelshift]site8.center) {Sites 8/10};
+\node[datalabel] at ([yshift=\datashift]site8.center) {$-2.650$ eV};
+
+\end{tikzpicture}

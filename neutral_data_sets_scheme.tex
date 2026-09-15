@@ -1,0 +1,55 @@
+\begin{tikzpicture}[
+  x=1cm,
+  y=1cm,
+  header/.style={font=\sffamily\bfseries\footnotesize, align=center},
+  crossbox/.style={draw=black!65, line width=0.65pt, fill=black!3,
+    text width=5.45cm, align=center, inner sep=4pt,
+    font=\sffamily\footnotesize},
+  gmbox/.style={draw=blue!70!black, line width=0.65pt, fill=blue!4,
+    text width=5.45cm, align=center, inner sep=4pt,
+    font=\sffamily\footnotesize},
+  commonbox/.style={draw=black!55, line width=0.65pt, fill=black!2,
+    text width=6.22cm, align=center, inner sep=4pt,
+    font=\sffamily\footnotesize},
+  crossarrow/.style={->, >=stealth, line width=0.65pt, black!75},
+  gmarrow/.style={->, >=stealth, line width=0.65pt, blue!70!black, dashed}
+]
+
+\node[header] at (-3.25,2.25)
+  {Crossed-parent models\\Two complementary routes};
+\node[header,text=blue!70!black] at (3.25,2.25)
+  {Reported global-minimum models\\Compare parent isomer and spin state};
+
+\node[crossbox] (crossedstart) at (-3.25,0.68)
+  {\textbf{Start}\\
+   \ce{Pt5Ge5 -> Pt10}; \quad
+   \ce{Pt10 -> Pt6Ge4}, \ce{Pt5Ge5}, \ce{Pt4Ge6}\\
+   (see Figure~\ref{fig:tfg_crossed_models})};
+\node[gmbox] (gmstart) at (3.25,0.68)
+  {\textbf{Start}\\
+   Reported GM structures\cite{ugartemendia:2022} of \ce{Pt10},
+   \ce{Pt6Ge4}, \ce{Pt5Ge5}, and \ce{Pt4Ge6}};
+
+\node[commonbox] (adsorption) at (0,-2.0)
+  {\textbf{Common \ce{CO}-adsorption protocol}\\
+   \ce{CO} is placed at selected Pt sites; each structure is optimized\\
+   at the selected parent geometry and spin state};
+
+\node[crossbox] (crosseduse) at (-3.25,-5.35)
+  {\textbf{Purpose}\\
+   \ce{Pt10 -> Pt_xGe_{10-x}}: representative composition trend\\
+   \ce{Pt5Ge5 -> Pt10}: pure-Pt geometry and spin\\
+   Tables~\ref{tab:tfg_adsorption_descriptors}
+   and~\ref{tab:tfg_bimetallic_adsorption_descriptors};\\
+   filled black symbols};
+\node[gmbox] (gmuse) at (3.25,-4.65)
+  {\textbf{Purpose}\\
+   Compare adsorption across parent isomers and spin states\\
+   Table~\ref{tab:tfg_adsorption_descriptors} and Supporting\\
+   Information; open blue symbols};
+
+\draw[crossarrow] (crossedstart.south) -- (adsorption.north west);
+\draw[gmarrow] (gmstart.south) -- (adsorption.north east);
+\draw[crossarrow] (adsorption.south west) -- (crosseduse.north);
+\draw[gmarrow] (adsorption.south east) -- (gmuse.north);
+\end{tikzpicture}

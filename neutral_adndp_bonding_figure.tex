@@ -1,0 +1,36 @@
+\begin{tikzpicture}[
+  x=1cm,
+  y=1cm,
+  panel/.style={font=\sffamily\bfseries\small, anchor=north west, fill=white,
+    fill opacity=0.86, text opacity=1, inner sep=2pt},
+  %label/.style={font=\sffamily\bfseries\small, align=center},
+  label/.style={font=\sffamily\small, align=center},
+  note/.style={font=\sffamily\scriptsize, align=center, text=black!70,
+    text width=0.28\linewidth}
+]
+
+% Panel sizes and positions can be tuned directly from here.
+\def\adndpw{0.305\linewidth}
+\def\yimage{0}
+\def\ylabel{-2.42}
+\def\ynote{-3.15}
+
+\node[inner sep=0pt] (pt10c) at (-4.35,\yimage)
+  {\includegraphics[width=\adndpw]{adndp_pt10_3c.png}};
+\node[inner sep=0pt] (pt5ge2c) at (0,\yimage)
+  {\includegraphics[width=\adndpw]{adndp_pt5ge_2c2e.png}};
+\node[inner sep=0pt] (pt5ge4c) at (4.15,\yimage)
+  {\includegraphics[width=\adndpw]{adndp_pt5ge_4c2e.png}};
+
+\node[panel] at ([xshift=-1.72cm,yshift=1.82cm]pt10c.center) {(a)};
+\node[panel] at ([xshift=-1.72cm,yshift=1.82cm]pt5ge2c.center) {(b)};
+\node[panel] at ([xshift=-1.72cm,yshift=1.82cm]pt5ge4c.center) {(c)};
+
+\node[label] at (-4.15,\ylabel) {\ce{Pt10}};
+\node[note] at (-4.15,\ynote) {representative\\3c topology};
+\node[label] at (0,\ylabel) {\ce{Pt5Ge5}};
+\node[note] at (0,\ynote) {representative Pt--Ge\\2c--2e element};
+\node[label] at (4.15,\ylabel) {\ce{Pt5Ge5}};
+\node[note] at (4.15,\ynote) {residual\\4c--2e element};
+
+\end{tikzpicture}
