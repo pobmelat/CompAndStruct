@@ -2,15 +2,15 @@ All cluster calculations were performed with Gaussian~16\cite{g16}
 using the PBE exchange--correlation functional (PBEPBE).\cite{perdew:pbe:1996}
 A def2-TZVP basis was used for C, O, and Ge,\cite{weigend:def2:2005}
 and Pt was described with the corresponding Karlsruhe valence basis and a
-60-electron effective core potential.\cite{andrae:epp:1990,weigend:def2:2005}
+60-electron \textcolor{cyan}{scalar relativistic} effective core potential \textcolor{cyan}{(ECP)}.\cite{andrae:epp:1990,weigend:def2:2005}
 This leaves 18 explicit Pt electrons.
 Geometry optimizations and harmonic
 frequency calculations were carried out for the bare clusters, carbonyl
-complexes, and free \ce{CO}. All structures retained in the adsorption
-analysis were confirmed as minima by the absence of imaginary frequencies.
+complexes, and free \ce{CO}. All structures in the adsorption
+analysis were confirmed as true minima by the absence of imaginary frequencies.
 Orbital stability was tested for the selected triplet
 \ce{Pt10} solution and for the seven distinct triplet \ce{Pt10CO} minima
-obtained after placing \ce{CO} at Pt sites.
+obtained after placing \ce{CO} at independent Pt sites.
 All these wavefunctions were stable under the
 perturbations considered.
 
@@ -50,14 +50,14 @@ Unless stated otherwise, each binding energy is referenced to free singlet
 \ce{CO} and to the optimized bare cluster with the same parent framework and
 multiplicity as the corresponding carbonyl.
 
-The bonding patterns were analyzed with AdNDP~2.0\cite{tkachenko:adndp2:2019}.
-The AdNDP searches included the chemically active valence space, with 10
+The bonding patterns were analyzed with the adaptive natural density partitioning tool (AdNDP~2.0).\cite{tkachenko:adndp2:2019}
+AdNDP searches included the chemically active valence space, with 10
 electrons per Pt atom and four per Ge atom. The Pt 5s and 5p semicore orbitals
 retained by the ECP were treated as core orbitals.
-For the triplet \ce{Pt10}, the alpha and beta density matrices were analyzed
+For the triplet \ce{Pt10}, the $\alpha$ and $\beta$ density matrices were analyzed
 independently. Elements involving the same atomic centers in both spin
-channels were paired when possible. The spin-resolved elements and their
-occupations are reported in Supporting
+channels were paired when possible. The Occupation Numbers (ON) indicate the probability of finding two electrons in a given bond. The spin-resolved elements and their
+ON are reported in Supporting
 Table~\ref{tab:tfg_adndp_summary}.
 
 For selected strongly and weakly bound carbonyl minima of \ce{Pt10},
