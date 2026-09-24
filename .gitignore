@@ -9,6 +9,7 @@
 *.synctex.gz
 *.toc
 *.xdv
+*.swp
 
 # Local editor and macOS files
 .DS_Store
