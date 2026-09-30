@@ -1,10 +1,171 @@
+\subsection*{Effective coordination number}
+
+The local environment of each Pt adsorption site was characterized with
+Hoppe's effective coordination number (ECoN),\cite{hoppe:econ:1979} which
+uses smooth distance-dependent weights instead of a fixed distance cutoff.
+For a center atom \(i\), each neighbor \(j\) is first described by the scaled
+distance
+\begin{equation}
+s_{ij}=\frac{d_{ij}}{r_i^{\rm cov}+r_j^{\rm cov}},
+\end{equation}
+where \(d_{ij}\) is the distance between the two atoms and \(r^{\rm cov}\) are
+covalent radii reported by Cordero et al.\cite{cordero:covalent-radii:2008}
+For the metal atoms considered here, we used
+\(r_{\ce{Pt}}=1.36~\si{\angstromunit}\) and
+\(r_{\ce{Ge}}=1.20~\si{\angstromunit}\). Each neighbor then contributes with
+the weight
+\begin{equation}
+w_{ij}=\exp\left[1-\left(\frac{s_{ij}}{\bar{s}_i}\right)^6\right],
+\end{equation}
+and the effective coordination number is
+\begin{equation}
+ECoN_i=\sum_j w_{ij}.
+\end{equation}
+The reference distance \(\bar{s}_i\) is the weighted average of the same
+scaled distances,
+\begin{equation}
+\bar{s}_i=\frac{\sum_j s_{ij}w_{ij}}{\sum_j w_{ij}},
+\end{equation}
+and is obtained iteratively until \(\bar{s}_i\) and the weights \(w_{ij}\)
+are mutually consistent. Close neighbors therefore contribute almost as full
+contacts, whereas distant atoms contribute only partially or negligibly.
+
+ECoN descriptors were evaluated for each Pt site in the bare cluster before
+\ce{CO} adsorption and, when indicated, for the optimized carbonyl. Only
+metal neighbors were included. The same weights were partitioned according to
+the element of each neighbor, giving
+\(ECoN_{\rm total}^{0}=ECoN_{\rm Pt}^{0}+ECoN_{\rm Ge}^{0}\). The initial Ge
+fraction is \(x_{\rm Ge}^{0}=ECoN_{\rm Ge}^{0}/ECoN_{\rm total}^{0}\), where
+the superscript 0 denotes the bare-cluster geometry. A superscript \(\ce{CO}\)
+denotes a descriptor evaluated for the optimized carbonyl after adsorption and
+relaxation.
+
 \subsection*{Additional cluster and carbonyl data}
+
+\begin{table}[H]
+\centering
+\begin{singlespace}
+\caption{Relative energies, \ce{CO} binding energies, and structural and
+vibrational descriptors for the distinct \ce{Pt10CO} minima obtained from the
+\ce{Pt10^{der}} and \ce{Pt10^{GM}} starting structures. Within each starting
+structure and multiplicity series, $\Delta E_0$ is measured relative to the
+lowest carbonyl minimum in that series. Each $BE_{\rm ad}(\ce{CO})$ uses free singlet \ce{CO}
+and the optimized bare \ce{Pt10} cluster from the same starting structure and
+multiplicity as the corresponding carbonyl. Site labels identify the initial
+Pt placements; labels separated by ``/'' denote placements that converge to
+the same optimized minimum.}
+\label{tab:tfg_adsorption_descriptors}
+\renewcommand{\arraystretch}{0.92}
+\small
+\begin{tabular}{cclcccc}
+\toprule
+{$\Delta E_0$ / eV} & {$2S+1$} & {Site} & {$BE_{\rm ad}(\ce{CO})$ / eV} &
+{$r(\ce{Pt-C})$ / \si{\angstromunit}} & {$r(\ce{C-O})$ / \si{\angstromunit}} &
+{$\nu(\ce{CO})$ / \si{\per\centi\metre}} \\
+\midrule
+\multicolumn{7}{l}{\textit{\ce{Pt10^{der}} series}} \\
+\multicolumn{7}{l}{\quad $2S+1=3$} \\
+0.00 & 3 & 6    & -2.66 & 1.83 & 1.16 & 2020.0 \\
+0.01 & 3 & 8/10 & -2.65 & 1.83 & 1.16 & 2012.4 \\
+0.07 & 3 & 3/5  & -2.59 & 1.84 & 1.16 & 2014.3 \\
+0.08 & 3 & 4    & -2.58 & 1.84 & 1.16 & 2013.0 \\
+0.16 & 3 & 2    & -2.49 & 1.83 & 1.16 & 2005.9 \\
+0.17 & 3 & 7    & -2.49 & 1.84 & 1.16 & 2016.0 \\
+0.50 & 3 & 1/9  & -2.16 & 1.84 & 1.16 & 2033.7 \\
+\multicolumn{7}{l}{\quad $2S+1=5$} \\
+0.00 & 5 & 5/7  & -2.65 & 1.83 & 1.16 & 2012.5 \\
+0.33 & 5 & 2/10 & -2.31 & 1.83 & 1.16 & 2017.1 \\
+0.42 & 5 & 3/6  & -2.22 & 1.83 & 1.16 & 2032.6 \\
+0.46 & 5 & 1/8  & -2.19 & 1.84 & 1.16 & 2011.0 \\
+0.64 & 5 & 4/9  & -2.01 & 1.84 & 1.16 & 2006.3 \\
+\midrule
+\multicolumn{7}{l}{\textit{\ce{Pt10^{GM}} series}} \\
+\multicolumn{7}{l}{\quad $2S+1=5$} \\
+0.00 & 5 & 3/6/9 & -2.28 & 1.82 & 1.16 & 2021.3 \\
+0.05 & 5 & 1/2/8 & -2.23 & 1.82 & 1.16 & 2020.6 \\
+0.67 & 5 & 7/10 & -1.61 & 1.88 & 1.16 & 2014.3 \\
+0.71 & 5 & 5 & -1.57 & 1.88 & 1.16 & 2012.5 \\
+0.73 & 5 & 4 & -1.55 & 1.88 & 1.16 & 2012.2 \\
+\multicolumn{7}{l}{\quad $2S+1=7$} \\
+0.00 & 7 & 8/9 & -2.35 & 1.82 & 1.16 & 2018.9 \\
+0.00 & 7 & 1/2/3/6 & -2.35 & 1.82 & 1.16 & 2018.9 \\
+0.60 & 7 & 4/5/7/10 & -1.76 & 1.88 & 1.16 & 2013.2 \\
+\multicolumn{7}{l}{\quad $2S+1=9$} \\
+0.00 & 9 & 1/2/3/6/8/9 & -1.60 & 1.86 & 1.16 & 2018.0 \\
+0.02 & 9 & 4/5/7/10 & -1.58 & 1.89 & 1.16 & 2014.7 \\
+\midrule
+--- & 1 & free \ce{CO} & --- & --- & 1.14 & 2129.0 \\
+\bottomrule
+\end{tabular}
+\end{singlespace}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{singlespace}
+\caption{\ce{CO} binding energies at the sampled Pt sites, together with
+structural and vibrational descriptors, for the Ge-containing carbonyls
+obtained in the \ce{Pt10}-to-\ce{Pt-Ge} atom-substitution derivation. Rows are
+ordered by $BE_{\rm ad}(\ce{CO})$ within each composition. All carbonyls in
+this table are singlets. Each $BE_{\rm ad}(\ce{CO})$ uses free singlet \ce{CO} and the isolated
+bare atom-substitution cluster of the corresponding composition as references.
+The corresponding GM data are reported separately in
+Supporting Table~\ref{tab:tfg_gm_bimetallic_adsorption_descriptors}. Site
+labels identify the initial Pt placements. Grouped labels denote positions
+represented by the same optimized result, either because they are equivalent
+in the starting structure or because they converge to the same minimum.}
+\label{tab:tfg_bimetallic_adsorption_descriptors}
+\renewcommand{\arraystretch}{0.92}
+\begin{tabular}{lccccc}
+\toprule
+{Composition} &  {Site} & {$BE_{\rm ad}(\ce{CO})$ / eV} &
+{$r(\ce{Pt-C})$ / \si{\angstromunit}} & {$r(\ce{C-O})$ / \si{\angstromunit}} &
+{$\nu(\ce{CO})$ / \si{\per\centi\metre}} \\
+\midrule
+\ce{Pt6Ge4^{der}CO}  & 2    & -2.25 & 1.84 & 1.16 & 2019.21 \\
+\ce{Pt6Ge4^{der}CO}  & 9    & -2.25 & 1.87 & 1.15 & 2037.50 \\
+\ce{Pt6Ge4^{der}CO}  & 1/4  & -2.24 & 1.84 & 1.16 & 2018.43 \\
+\ce{Pt6Ge4^{der}CO}  & 5/7  & -1.57 & 1.90 & 1.15 & 2018.58 \\
+\midrule
+\ce{Pt5Ge5^{der}CO}  & 6/8  & -2.08 & 1.90 & 1.16 & 2003.10 \\
+\ce{Pt5Ge5^{der}CO}  & 7/10 & -1.66 & 1.89 & 1.15 & 2027.46 \\
+\ce{Pt5Ge5^{der}CO}  & 4    & -1.34 & 1.92 & 1.16 & 2004.80 \\
+\midrule
+\ce{Pt4Ge6^{der}CO}  & 5/7 & -1.46 & 1.90 & 1.16 & 2019.36 \\
+\ce{Pt4Ge6^{der}CO}  & 2 & -1.31 & 1.88 & 1.16 & 2020.88 \\
+\ce{Pt4Ge6^{der}CO}  & 1 & -1.05 & 1.88 & 1.16 & 2004.13 \\
+\bottomrule
+\end{tabular}
+\end{singlespace}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\input{neutral_data_sets_scheme}
+\caption{Organization of the two cluster data sets used for the \ce{CO}
+binding-energy analysis. The derivative set contains the
+\ce{Pt10}-to-\ce{Pt_{x}Ge_{10-x}} composition sequence and the reverse
+\ce{Pt5Ge5}-to-\ce{Pt10} derivation. Calculations initiated from the reported
+global-minimum structures were retained to examine the effect of the starting
+structure and spin state. \red{IT COULD BE REMOVED.}}
+\label{fig:neutral_data_sets}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\input{neutral_cluster_site_numbering_figure}
+\caption{Numbering of the Pt atoms used to place \ce{CO} and calculate the
+\ce{CO} binding energies. Panel (a) shows \ce{Pt10^{der}}. Panels (b)--(d)
+show the \ce{Pt6Ge4^{der}}, \ce{Pt5Ge5^{der}}, and \ce{Pt4Ge6^{der}} models obtained from
+\ce{Pt10^{GM}}, respectively. The labels retain the atom indices of the
+corresponding starting structure and identify the starting adsorption sites.}
+\label{fig:tfg_site_numbering}
+\end{figure}
 
 \begin{table}[H]
 \begin{center}
 \caption{Electronic energies, zero-point vibrational energies (ZPVE), and
-relative energies for the \ce{Pt10} structures optimized
-directly from the \ce{Pt5Ge5} parent framework. Each entry corresponds to its
+relative energies for \ce{Pt10^{der}}. Each entry corresponds to its
 own relaxed geometry and frequency calculation at the PBEPBE/def2-TZVP level.
 $\Delta E_0$ is obtained from $E_0=E_{\rm elec}+\mathrm{ZPVE}$, taking the
 orbital-stable triplet structure as the zero of the relative-energy scale.
@@ -29,12 +190,38 @@ orbital-stable triplet structure as the zero of the relative-energy scale.
 
 \begin{table}[H]
 \begin{center}
-\caption{Summary of the AdNDP decompositions for the crossed-parent models.
+\caption{Hoppe ECoN values for each Pt atom in the two optimized \ce{Pt10}
+structures compared in Section~3.2. Only Pt neighbors are included. The
+\ce{Pt10^{GM}} structure is a nonet, whereas \ce{Pt10^{der}} is a triplet.}
+\label{tab:tfg_pt10_bare_econ}
+\begin{tabular}{crr}
+\toprule
+{Pt atom} & {\ce{Pt10^{GM}} nonet} & {\ce{Pt10^{der}} triplet} \\
+\midrule
+1  & 5.69 & 3.03 \\
+2  & 5.69 & 4.46 \\
+3  & 5.69 & 5.92 \\
+4  & 3.00 & 3.21 \\
+5  & 3.00 & 3.95 \\
+6  & 5.69 & 6.01 \\
+7  & 3.00 & 3.96 \\
+8  & 5.68 & 3.04 \\
+9  & 5.68 & 3.18 \\
+10 & 3.00 & 4.63 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\caption{Summary of the AdNDP decompositions for the derivative models.
 Each model occupies one table row; multiline cells give the AdNDP elements,
 occupation range, and interpretation. ON denotes the AdNDP occupation number.
 For the triplet \ce{Pt10}, the alpha and beta density matrices were analyzed
 independently. The 3c elements involving the same atomic centers in both spin
-channels were paired to obtain their combined occupations.}
+channels were paired to obtain their combined occupations. The two alternative
+\ce{Pt5Ge5} decompositions are shown in red pending final selection.}
 \label{tab:tfg_adndp_summary}
 \renewcommand{\arraystretch}{1.08}
 \setlength{\tabcolsep}{2.8pt}
@@ -60,7 +247,8 @@ channels were paired to obtain their combined occupations.}
 			paired 3c: 1.984--1.994
 			\end{tabular} & \begin{tabular}[t]{@{}l@{}}19 $\times$ 3c--2e\\
 		2 $\times$ 3c--1e;\\delocalized\\multicenter model\end{tabular} \\\hline
-\ce{Pt5Ge5} & 1 & \begin{tabular}[t]{@{}l@{}}10 $\times$ Pt 1c--2e\\2 $\times$ Pt--Pt 2c--2e\\22 $\times$ Pt--Ge 2c--2e\\1 $\times$ 4c--2e\end{tabular} & 1.89--1.99 & mainly covalent with residual multicenter bonding \\
+\red{\ce{Pt5Ge5} (A)} & \red{1} & \red{\begin{tabular}[t]{@{}l@{}}10 $\times$ Ge-centered 1c--2e\\21 $\times$ Pt--Ge 2c--2e\\3 $\times$ Ge--Ge 2c--2e\\1 $\times$ 4c--2e\end{tabular}} & \red{1.895--1.988} & \red{localized 1c/2c elements with one 4c element} \\
+\red{\ce{Pt5Ge5} (E)} & \red{1} & \red{\begin{tabular}[t]{@{}l@{}}20 $\times$ Ge-centered 1c--2e\\14 $\times$ Pt--Ge 2c--2e\\3 $\times$ Ge--Ge 2c--2e\end{tabular}} & \red{1.820--1.983} & \red{fully localized 1c/2c decomposition} \\
 \ce{Pt6Ge4} & 1 & \begin{tabular}[t]{@{}l@{}}12 $\times$ Pt 1c--2e\\5 $\times$
 Pt--Pt 2c--2e\\21 $\times$ Pt--Ge 2c--2e\end{tabular} & 1.89--1.98 & localized
 Pt--Pt/Pt--Ge bonding \\\hline
@@ -77,9 +265,13 @@ minimum accepted spin-resolved ON of 0.960. Nineteen alpha and beta 3c
 elements involve identical sets of Pt atoms; their summed occupations are
 listed as paired 3c values. The remaining alpha 3c elements are located on
 Pt(2)--Pt(3)--Pt(7) and Pt(5)--Pt(6)--Pt(10), with ON values of 0.99445 and
-0.99450, respectively. For \ce{Pt5Ge5}, the threshold
+0.99450, respectively. For \ce{Pt5Ge5} model A, the threshold
 parameters were 0.113, 0.135, and 0.200 for the 1c, 2c, and 4c searches,
-respectively. The 1c and 2c parameters were 0.100 and 0.140 for \ce{Pt6Ge4},
+respectively; the residual density after this decomposition was 1.73 electrons.
+\red{For \ce{Pt5Ge5} model E, the 1c and 2c thresholds were both 0.180;
+the residual density was 0.016 electrons. HAY QUE ELEGIR UNA DE LAS DOS
+SOLUCIONES BEFORE SUBMISSION.}
+The 1c and 2c parameters were 0.100 and 0.140 for \ce{Pt6Ge4},
 and 0.160 and 0.250 for \ce{Pt4Ge6}.}
 \end{center}
 \end{table}
@@ -88,32 +280,33 @@ and 0.160 and 0.250 for \ce{Pt4Ge6}.}
 \begin{center}
 \caption{Binding energies for \ce{CO} placed at different Pt atoms, together
 with structural and vibrational descriptors, for carbonyls initiated from the
-reported global-minimum (GM) parent structures. Each composition is represented
+reported global-minimum (GM) structures. Each composition is represented
 using the spin state of its bare-cluster GM. \protect\blue{The GM is a triplet for
-\ce{Pt6Ge4} and a singlet for \ce{Pt5Ge5} and \ce{Pt4Ge6}.} Each $BE$ uses free singlet \ce{CO} and the
+\ce{Pt6Ge4} and a singlet for \ce{Pt5Ge5} and \ce{Pt4Ge6}.} Each
+$BE_{\rm ad}(\ce{CO})$ uses free singlet \ce{CO} and the
 optimized bare GM cluster with the same spin state as reference.}
 \label{tab:tfg_gm_bimetallic_adsorption_descriptors}
 %\scriptsize
 \begin{tabular}{lcrrrr}
 \toprule
-{Composition} & {Site} & {$BE$ / eV} &
+{Composition} & {Site} & {$BE_{\rm ad}(\ce{CO})$ / eV} &
 {$r(\ce{Pt-C})$ / \AA} & {$r(\ce{C-O})$ / \AA} &
 {$\nu(\ce{CO})$ / \si{\per\centi\metre}} \\
 \midrule
-\ce{Pt6Ge4CO} & 2 & -1.947 & 1.851 & 1.157 & 2018.5 \\
-\ce{Pt6Ge4CO} & 6 & -1.842 & 1.853 & 1.157 & 2022.5 \\
-\ce{Pt6Ge4CO} & 3 & -1.732 & 1.859 & 1.157 & 2016.6 \\
-\ce{Pt6Ge4CO} & 1 & -1.657 & 1.852 & 1.157 & 2021.5 \\
-\ce{Pt6Ge4CO} & 5 & -1.215 & 1.926 & 1.154 & 2011.2 \\
-\ce{Pt6Ge4CO} & 4 & -1.207 & 1.909 & 1.155 & 2013.6 \\
+\ce{Pt6Ge4CO} & 2 & -1.95 & 1.85 & 1.16 & 2018.5 \\
+\ce{Pt6Ge4CO} & 6 & -1.84 & 1.85 & 1.16 & 2022.5 \\
+\ce{Pt6Ge4CO} & 3 & -1.73 & 1.86 & 1.16 & 2016.6 \\
+\ce{Pt6Ge4CO} & 1 & -1.66 & 1.85 & 1.16 & 2021.5 \\
+\ce{Pt6Ge4CO} & 5 & -1.22 & 1.93 & 1.15 & 2011.2 \\
+\ce{Pt6Ge4CO} & 4 & -1.21 & 1.91 & 1.16 & 2013.6 \\
 \midrule
-\ce{Pt5Ge5CO} & 1/2/4/5 & -1.346 & 1.898 & 1.157 & 2006.1 \\
-\ce{Pt5Ge5CO} & 3 & -0.788 & 1.956 & 1.151 & 2022.0 \\
+\ce{Pt5Ge5CO} & 1/2/4/5 & -1.35 & 1.90 & 1.16 & 2006.1 \\
+\ce{Pt5Ge5CO} & 3 & -0.79 & 1.96 & 1.15 & 2022.0 \\
 \midrule
-\ce{Pt4Ge6CO} & 2 & -1.506 & 1.910 & 1.155 & 2009.6 \\
-\ce{Pt4Ge6CO} & 4 & -1.240 & 1.927 & 1.154 & 2012.0 \\
-\ce{Pt4Ge6CO} & 1 & -1.150 & 1.917 & 1.155 & 2006.7 \\
-\ce{Pt4Ge6CO} & 3 & -1.046 & 1.915 & 1.155 & 2002.7 \\
+\ce{Pt4Ge6CO} & 2 & -1.51 & 1.91 & 1.16 & 2009.6 \\
+\ce{Pt4Ge6CO} & 4 & -1.24 & 1.93 & 1.15 & 2012.0 \\
+\ce{Pt4Ge6CO} & 1 & -1.15 & 1.92 & 1.16 & 2006.7 \\
+\ce{Pt4Ge6CO} & 3 & -1.05 & 1.92 & 1.16 & 2002.7 \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -124,7 +317,7 @@ optimized bare GM cluster with the same spin state as reference.}
 \caption{Pre-adsorption local Hoppe ECoN descriptors for the Pt sites in the
 optimized global-minimum (GM) Pt--Ge clusters. These values were calculated
 to examine whether the local-environment patterns found for the
-crossed-parent structures persist for the GM parents. Only metal neighbors
+derivative structures persist for the GM structures. Only metal neighbors
 are included, with
 $ECoN_{\rm total}^{0}=ECoN_{\rm Pt}^{0}+ECoN_{\rm Ge}^{0}$ and
 $x_{\rm Ge}^{0}=ECoN_{\rm Ge}^{0}/ECoN_{\rm total}^{0}$. The binding
@@ -135,24 +328,24 @@ bare-cluster GM. \protect{The GM is a triplet for \ce{Pt6Ge4} and a singlet for
 \small
 \begin{tabular}{lccrrrr}
 \toprule
-{System} & {Site} & {$BE$ / eV} &
+{System} & {Site} & {$BE_{\rm ad}(\ce{CO})$ / eV} &
 {$ECoN_{\rm total}^{0}$} & {$ECoN_{\rm Pt}^{0}$} &
 {$ECoN_{\rm Ge}^{0}$} & {$x_{\rm Ge}^{0}$} \\
 \midrule
-\ce{Pt6Ge4CO} & 2 & -1.947 & 3.837 & 2.545 & 1.292 & 0.337 \\
-\ce{Pt6Ge4CO} & 3 & -1.732 & 3.961 & 1.730 & 2.231 & 0.563 \\
-\ce{Pt6Ge4CO} & 1 & -1.657 & 4.869 & 2.569 & 2.300 & 0.472 \\
-\ce{Pt6Ge4CO} & 6 & -1.842 & 3.952 & 1.752 & 2.200 & 0.557 \\
-\ce{Pt6Ge4CO} & 5 & -1.215 & 3.889 & 0.770 & 3.119 & 0.802 \\
-\ce{Pt6Ge4CO} & 4 & -1.207 & 3.870 & 0.748 & 3.122 & 0.807 \\
+\ce{Pt6Ge4CO} & 2 & -1.95 & 3.84 & 2.55 & 1.29 & 0.34 \\
+\ce{Pt6Ge4CO} & 3 & -1.73 & 3.96 & 1.73 & 2.23 & 0.56 \\
+\ce{Pt6Ge4CO} & 1 & -1.66 & 4.87 & 2.57 & 2.30 & 0.47 \\
+\ce{Pt6Ge4CO} & 6 & -1.84 & 3.95 & 1.75 & 2.20 & 0.56 \\
+\ce{Pt6Ge4CO} & 5 & -1.22 & 3.89 & 0.77 & 3.12 & 0.80 \\
+\ce{Pt6Ge4CO} & 4 & -1.21 & 3.87 & 0.75 & 3.12 & 0.81 \\
 \midrule
-\ce{Pt5Ge5CO} &  1/2/4/5 & -1.346 & 3.482 & 0.242 & 3.240 & 0.930 \\
-\ce{Pt5Ge5CO} & 3 & -0.788 & 4.029 & 0.009 & 4.020 & 0.998 \\
+\ce{Pt5Ge5CO} &  1/2/4/5 & -1.35 & 3.48 & 0.24 & 3.24 & 0.93 \\
+\ce{Pt5Ge5CO} & 3 & -0.79 & 4.03 & 0.01 & 4.02 & 1.00 \\
 \midrule
-\ce{Pt4Ge6CO} & 2 & -1.506 & 4.609 & 0.370 & 4.239 & 0.920 \\
-\ce{Pt4Ge6CO} & 4 & -1.240 & 3.015 & 0.004 & 3.010 & 0.999 \\
-\ce{Pt4Ge6CO} & 1 & -1.150 & 2.992 & 0.002 & 2.989 & 0.999 \\
-\ce{Pt4Ge6CO} & 3 & -1.046 & 4.710 & 0.447 & 4.263 & 0.905 \\
+\ce{Pt4Ge6CO} & 2 & -1.51 & 4.61 & 0.37 & 4.24 & 0.92 \\
+\ce{Pt4Ge6CO} & 4 & -1.24 & 3.02 & 0.00 & 3.01 & 1.00 \\
+\ce{Pt4Ge6CO} & 1 & -1.15 & 2.99 & 0.00 & 2.99 & 1.00 \\
+\ce{Pt4Ge6CO} & 3 & -1.05 & 4.71 & 0.45 & 4.26 & 0.91 \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -161,7 +354,7 @@ bare-cluster GM. \protect{The GM is a triplet for \ce{Pt6Ge4} and a singlet for
 \begin{table}[H]
 \begin{center}
 \caption{Local Hoppe ECoN descriptors for the Pt atom bound to \ce{CO} in
-the optimized crossed-parent Pt--Ge carbonyls. The superscript \ce{CO}
+the optimized atom-substitution Pt--Ge carbonyls. The superscript \ce{CO}
 distinguishes these final-state descriptors from the pre-adsorption values in
 Table~\ref{tab:tfg_crossed_ptge_econ_descriptors}. Only metal neighbors are
 included, with
@@ -172,22 +365,22 @@ $x_{\rm Ge}^{\ce{CO}}=ECoN_{\rm Ge}^{\ce{CO}}/ECoN_{\rm total}^{\ce{CO}}$.}
 \small
 \begin{tabular}{lcrrrrr}
 \toprule
-{System} & {Site} & {$BE$ / eV} &
+{System} & {Site} & {$BE_{\rm ad}(\ce{CO})$ / eV} &
 {$ECoN_{\rm total}^{\ce{CO}}$} & {$ECoN_{\rm Pt}^{\ce{CO}}$} &
 {$ECoN_{\rm Ge}^{\ce{CO}}$} & {$x_{\rm Ge}^{\ce{CO}}$} \\
 \midrule
-\ce{Pt6Ge4CO}  & 2   & -2.246 & 3.004 & 1.774 & 1.230 & 0.409 \\
-\ce{Pt6Ge4CO}  & 9   & -2.245 & 3.012 & 1.163 & 1.849 & 0.614 \\
-\ce{Pt6Ge4CO}  & 1/4 & -2.235 & 4.300 & 2.425 & 1.876 & 0.436 \\
-\ce{Pt6Ge4CO}  & 5/7 & -1.567 & 2.873 & 0.657 & 2.216 & 0.771 \\
+\ce{Pt6Ge4CO}  & 2   & -2.25 & 3.00 & 1.77 & 1.23 & 0.41 \\
+\ce{Pt6Ge4CO}  & 9   & -2.25 & 3.01 & 1.16 & 1.85 & 0.61 \\
+\ce{Pt6Ge4CO}  & 1/4 & -2.24 & 4.30 & 2.43 & 1.88 & 0.44 \\
+\ce{Pt6Ge4CO}  & 5/7 & -1.57 & 2.87 & 0.66 & 2.22 & 0.77 \\
 \midrule
-\ce{Pt5Ge5CO}  & 6/8  & -2.076 & 5.691 & 1.688 & 4.002 & 0.703 \\
-\ce{Pt5Ge5CO}  & 7/10 & -1.661 & 2.952 & 0.937 & 2.015 & 0.683 \\
-\ce{Pt5Ge5CO}  & 4    & -1.342 & 2.980 & 0.000 & 2.980 & 1.000 \\
+\ce{Pt5Ge5CO}  & 6/8  & -2.08 & 5.69 & 1.69 & 4.00 & 0.70 \\
+\ce{Pt5Ge5CO}  & 7/10 & -1.66 & 2.95 & 0.94 & 2.02 & 0.68 \\
+\ce{Pt5Ge5CO}  & 4    & -1.34 & 2.98 & 0.00 & 2.98 & 1.00 \\
 \midrule
-\ce{Pt4Ge6CO}  & 5/7 & -1.459 & 3.920 & 0.686 & 3.234 & 0.825 \\
-\ce{Pt4Ge6CO}  & 2   & -1.305 & 3.221 & 0.134 & 3.086 & 0.958 \\
-\ce{Pt4Ge6CO}  & 1   & -1.052 & 5.902 & 1.423 & 4.479 & 0.759 \\
+\ce{Pt4Ge6CO}  & 5/7 & -1.46 & 3.92 & 0.69 & 3.23 & 0.83 \\
+\ce{Pt4Ge6CO}  & 2   & -1.31 & 3.22 & 0.13 & 3.09 & 0.96 \\
+\ce{Pt4Ge6CO}  & 1   & -1.05 & 5.90 & 1.42 & 4.48 & 0.76 \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -196,7 +389,7 @@ $x_{\rm Ge}^{\ce{CO}}=ECoN_{\rm Ge}^{\ce{CO}}/ECoN_{\rm total}^{\ce{CO}}$.}
 \begin{table}[H]
 \begin{center}
 \caption{Local Hoppe ECoN descriptors for the Pt atom bound to \ce{CO} in
-the optimized GM-parent Pt--Ge carbonyls. Each composition is represented
+the optimized GM Pt--Ge carbonyls. Each composition is represented
 using the spin state of its bare-cluster GM. \protect\blue{The GM is a triplet for
 \ce{Pt6Ge4} and a singlet for \ce{Pt5Ge5} and \ce{Pt4Ge6}.} The superscript \ce{CO} indicates that these
 descriptors are evaluated after adsorption and relaxation.}
@@ -204,24 +397,24 @@ descriptors are evaluated after adsorption and relaxation.}
 %\scriptsize
 \begin{tabular}{llrrrrr}
 \toprule
-{System} & {Site} & {$BE$ / eV} &
+{System} & {Site} & {$BE_{\rm ad}(\ce{CO})$ / eV} &
 {$ECoN_{\rm total}^{\ce{CO}}$} & {$ECoN_{\rm Pt}^{\ce{CO}}$} &
 {$ECoN_{\rm Ge}^{\ce{CO}}$} & {$x_{\rm Ge}^{\ce{CO}}$} \\
 \midrule
-\ce{Pt6Ge4CO} & 2  & -1.947 & 3.968 & 2.849 & 1.119 & 0.282 \\
-\ce{Pt6Ge4CO} & 6  & -1.842 & 4.283 & 2.354 & 1.929 & 0.450 \\
-\ce{Pt6Ge4CO} & 3  & -1.732 & 4.098 & 2.146 & 1.952 & 0.476 \\
-\ce{Pt6Ge4CO} & 1  & -1.657 & 5.077 & 3.032 & 2.044 & 0.403 \\
-\ce{Pt6Ge4CO} & 5  & -1.215 & 3.916 & 0.895 & 3.021 & 0.771 \\
-\ce{Pt6Ge4CO} & 4  & -1.207 & 2.931 & 0.774 & 2.157 & 0.736 \\
+\ce{Pt6Ge4CO} & 2  & -1.95 & 3.97 & 2.85 & 1.12 & 0.28 \\
+\ce{Pt6Ge4CO} & 6  & -1.84 & 4.28 & 2.35 & 1.93 & 0.45 \\
+\ce{Pt6Ge4CO} & 3  & -1.73 & 4.10 & 2.15 & 1.95 & 0.48 \\
+\ce{Pt6Ge4CO} & 1  & -1.66 & 5.08 & 3.03 & 2.04 & 0.40 \\
+\ce{Pt6Ge4CO} & 5  & -1.22 & 3.92 & 0.90 & 3.02 & 0.77 \\
+\ce{Pt6Ge4CO} & 4  & -1.21 & 2.93 & 0.77 & 2.16 & 0.74 \\
 \midrule
-\ce{Pt5Ge5CO} & 1/2/4/5  & -1.346 & 4.523 & 1.547 & 2.976 & 0.658 \\
-\ce{Pt5Ge5CO} & 3  & -0.788 & 3.962 & 0.005 & 3.957 & 0.999 \\
+\ce{Pt5Ge5CO} & 1/2/4/5  & -1.35 & 4.52 & 1.55 & 2.98 & 0.66 \\
+\ce{Pt5Ge5CO} & 3  & -0.79 & 3.96 & 0.01 & 3.96 & 1.00 \\
 \midrule
-\ce{Pt4Ge6CO} & 2  & -1.506 & 4.605 & 0.406 & 4.199 & 0.912 \\
-\ce{Pt4Ge6CO} & 4  & -1.240 & 2.968 & 0.001 & 2.967 & 1.000 \\
-\ce{Pt4Ge6CO} & 1  & -1.150 & 4.082 & 0.220 & 3.861 & 0.946 \\
-\ce{Pt4Ge6CO} & 3  & -1.046 & 4.705 & 0.550 & 4.155 & 0.883 \\
+\ce{Pt4Ge6CO} & 2  & -1.51 & 4.61 & 0.41 & 4.20 & 0.91 \\
+\ce{Pt4Ge6CO} & 4  & -1.24 & 2.97 & 0.00 & 2.97 & 1.00 \\
+\ce{Pt4Ge6CO} & 1  & -1.15 & 4.08 & 0.22 & 3.86 & 0.95 \\
+\ce{Pt4Ge6CO} & 3  & -1.05 & 4.71 & 0.55 & 4.16 & 0.88 \\
 \bottomrule
 \end{tabular}
 \end{center}

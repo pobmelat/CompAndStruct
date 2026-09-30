@@ -1,6 +1,7 @@
 \definecolor{ptten}{RGB}{35,35,35}
 \definecolor{crossedparent}{RGB}{35,35,35}
 \definecolor{globalparent}{RGB}{0,90,190}
+\definecolor{crossspin}{RGB}{190,35,35}
 
 \begin{tikzpicture}
 \begin{axis}[
@@ -10,7 +11,7 @@
   ymin=-2.85, ymax=-0.25,
   xtick={0.95,2.00,2.65,3.25},
   xticklabels={\ce{Pt10CO},\ce{Pt6Ge4CO},\ce{Pt5Ge5CO},\ce{Pt4Ge6CO}},
-  ylabel={$BE(\ce{CO})$ / eV},
+  ylabel={$BE_{\rm ad}(\ce{CO})$ / eV},
   ylabel style={yshift=-2pt},
   tick label style={font=\small},
   label style={font=\small},
@@ -40,7 +41,7 @@
 % Each vertical bar shows the minimum--maximum interval and each marker the
 % mean over all Pt sites represented by the corresponding series. Horizontal
 % offsets are used only for readability.
-% Crossed-parent Pt10: triplet and quintet.
+% Pt10der: triplet and quintet.
 \addplot[ptten,line width=1.0pt] coordinates {(0.56,-2.657) (0.56,-2.156)};
 \addplot[ptten,line width=1.0pt] coordinates {(0.50,-2.657) (0.62,-2.657)};
 \addplot[ptten,line width=1.0pt] coordinates {(0.50,-2.156) (0.62,-2.156)};
@@ -65,7 +66,7 @@
 \addplot[globalparent,densely dashed,line width=1.0pt] coordinates {(1.34,-1.547) (1.46,-1.547)};
 \addplot[only marks,mark=triangle*,mark size=3.0pt,globalparent,
   mark options={fill=white,draw=globalparent,line width=0.8pt}] coordinates {(1.40,-1.982)};
-% Pt6Ge4: crossed-parent singlet and GM-parent triplet.
+% Pt6Ge4: atom-substitution singlet and GM triplet.
 \addplot[crossedparent,line width=1.0pt] coordinates {(1.80,-2.246) (1.80,-1.567)};
 \addplot[crossedparent,line width=1.0pt] coordinates {(1.74,-2.246) (1.86,-2.246)};
 \addplot[crossedparent,line width=1.0pt] coordinates {(1.74,-1.567) (1.86,-1.567)};

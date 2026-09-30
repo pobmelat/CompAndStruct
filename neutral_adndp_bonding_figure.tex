@@ -6,7 +6,8 @@
   %label/.style={font=\sffamily\bfseries\small, align=center},
   label/.style={font=\sffamily\small, align=center},
   note/.style={font=\sffamily\scriptsize, align=center, text=black!70,
-    text width=0.28\linewidth}
+    text width=0.28\linewidth},
+  modela/.style={font=\sffamily\bfseries\scriptsize, align=center, text=red!75!black}
 ]
 
 % Panel sizes and positions can be tuned directly from here.
@@ -26,11 +27,12 @@
 \node[panel] at ([xshift=-1.72cm,yshift=1.82cm]pt5ge2c.center) {(b)};
 \node[panel] at ([xshift=-1.72cm,yshift=1.82cm]pt5ge4c.center) {(c)};
 
-\node[label] at (-4.15,\ylabel) {\ce{Pt10}};
+\node[label] at (-4.15,\ylabel) {\ce{Pt10^{der}}};
 \node[note] at (-4.15,\ynote) {representative\\3c topology};
-\node[label] at (0,\ylabel) {\ce{Pt5Ge5}};
+\node[label] at (0,\ylabel) {\ce{Pt5Ge5^{der}}};
 \node[note] at (0,\ynote) {representative Pt--Ge\\2c--2e element};
-\node[label] at (4.15,\ylabel) {\ce{Pt5Ge5}};
+\node[label] at (4.15,\ylabel) {\ce{Pt5Ge5^{der}}};
 \node[note] at (4.15,\ynote) {residual\\4c--2e element};
+\node[modela] at (4.15,-3.72) {Model A only};
 
 \end{tikzpicture}

@@ -1,0 +1,161 @@
+\subsection{Interaction and fragment reorganization}
+{To complement the ECoN analysis, we decompose the electronic adsorption
+energy for selected strongly and weakly bound structures into the frozen-fragment
+interaction and the metal and CO reorganization terms.}
+
+The structural descriptors discussed above do not separate the direct
+Pt--CO interaction from the energy associated with reorganizing the cluster
+and \ce{CO}. To distinguish these contributions, we first compared two
+triplet \ce{Pt10^{der}CO} minima obtained from the same \ce{Pt10^{der}} starting structure:
+the most strongly bound structure, initiated at site 6, and the weakest
+minimum, reached from the site-1 and site-9 starting positions. Using the same
+starting structure and multiplicity provides a direct comparison of the factors
+responsible for their different binding energies. The electronic binding
+energy contains both the Pt--CO interaction and the energy change caused by
+reorganization of the two fragments. To separate these effects,
+we first take the optimized \ce{Pt10CO} complex and remove \ce{CO} without
+changing the coordinates of the metal cluster. This gives the frozen
+\ce{Pt10} fragment, \(\mathbf R_{\ce{Pt10}}^{\ce{Pt10CO}}\). We do the
+opposite for \ce{CO}, obtaining
+\(\mathbf R_{\ce{CO}}^{\ce{Pt10CO}}\). The interaction energy is the energy
+of the optimized complex minus the energies of these two frozen fragments:
+\begin{align}
+E_{\mathrm{int}} &=
+E_{\ce{Pt10CO}}(\mathbf R_{\ce{Pt10CO}})
+-E_{\ce{Pt10}}(\mathbf R_{\ce{Pt10}}^{\ce{Pt10CO}})
+-E_{\ce{CO}}(\mathbf R_{\ce{CO}}^{\ce{Pt10CO}}),\\
+E_{\mathrm{def}} &=
+\left[
+E_{\ce{Pt10}}(\mathbf R_{\ce{Pt10}}^{\ce{Pt10CO}})
+-E_{\ce{Pt10}}(\mathbf R_{\ce{Pt10}}^{0})
+\right]
+{}+
+\left[
+E_{\ce{CO}}(\mathbf R_{\ce{CO}}^{\ce{Pt10CO}})
+-E_{\ce{CO}}(\mathbf R_{\ce{CO}}^{0})
+\right],
+\label{eq:tfg_deformation}
+\end{align}
+Thus, $E_{\mathrm{int}}$ describes the electronic stabilization obtained when
+the two frozen fragments are brought together at the geometry of the complex.
+The deformation term in Eq.~\ref{eq:tfg_deformation} then measures what is
+lost or gained by changing each isolated fragment from its own optimized
+geometry, \(\mathbf R^0\), to the geometry it has in the complex. The first
+bracket is the \ce{Pt10} contribution and the second is the \ce{CO}
+contribution. Thus, $E_{\mathrm{def}}$ is the geometric cost, or benefit, of
+preparing the two fragments for adsorption. A positive value is a deformation penalty; a negative value
+means that the fragment geometry taken from the complex is more stable than
+the isolated reference used here. The two bracketed terms are reported in
+Table~\ref{tab:tfg_interaction_deformation} as
+$E_{\rm reorg}^{\rm metal}$ and $E_{\rm reorg}^{\ce{CO}}$, respectively;
+therefore,
+$\Delta E_{\mathrm{elec}}=E_{\mathrm{int}}+E_{\mathrm{def}}$, where
+$\Delta E_{\mathrm{elec}}$ is the electronic contribution to the binding
+energy before the zero-point vibrational correction. The zero-point correction
+is then added to obtain the final $BE_{\rm ad}(\ce{CO})$.
+
+
+For the trajectory initiated at site 6, \(E_{\rm int}=-2.71\) eV. The
+metal-cluster and \ce{CO} contributions to \(E_{\rm def}\) are \(-0.06\) eV
+and \(+0.03\) eV, respectively. The first value shows that reorganization of
+the \ce{Pt10} structure slightly strengthens the binding. The second is the
+small energy cost of deforming \ce{CO}. Together, these terms give
+\(E_{\rm def}=-0.03\) eV and \(\Delta E_{\rm elec}=-2.74\) eV.
+
+For the weaker site-1/site-9 minimum, \(E_{\rm int}=-2.46\) eV. The
+metal-cluster and \ce{CO} contributions are \(+0.20\) and \(+0.02\) eV,
+respectively, giving \(E_{\rm def}=+0.22\) eV and
+\(\Delta E_{\rm elec}=-2.24\) eV. The site-6 Pt--CO interaction is therefore
+0.25 eV more stabilizing. In addition, the metal-cluster contribution
+changes from a \(+0.20\) eV penalty to a \(-0.06\) eV stabilization. These
+differences account for most of the 0.51 eV difference in
+\(\Delta E_{\rm elec}\). The full decomposition and the corresponding
+\(BE_{\rm ad}(\ce{CO})\) values are reported in
+Table~\ref{tab:tfg_interaction_deformation}.
+
+{This favorable metal contribution is consistent with the fragment
+relaxation. After \ce{CO} is removed and the metal cluster is reoptimized,
+the cluster reaches another stable triplet minimum. Its $E_0$ lies 0.15 eV
+below that of the initial \ce{Pt10} isomer. This result shows that adsorption
+at site 6 can lead to reorganization of \ce{Pt10} toward a lower-energy
+triplet isomer. The binding energy therefore includes both the
+frozen-fragment interaction and a favorable change in the metal cluster.}
+
+{The same frozen-fragment analysis was then applied to representative strongly
+and weakly bound minima of \ce{Pt6Ge4CO}, \ce{Pt5Ge5CO}, and \ce{Pt4Ge6CO}
+obtained in the \ce{Pt10}-to-\ce{Pt-Ge} derivation. For \ce{Pt6Ge4}, the stronger site has a much more
+stabilizing interaction energy ($-2.70$ versus $-1.91$ eV). Its
+metal-reorganization penalty is slightly larger (+0.35 versus +0.27 eV),
+but this difference is too small to overcome the interaction advantage. Both
+terms favor the stronger \ce{Pt4Ge6} site. Its interaction energy is
+$-1.89$ eV, compared with $-1.66$ eV for site 1, and its metal
+reorganization is smaller ($+0.34$ versus $+0.52$ eV).}
+
+{The two \ce{Pt5Ge5} minima show a different balance. The strongly bound
+site-6/8 structure has a less stabilizing frozen-fragment interaction than
+site 4 ($-1.78$ versus $-1.92$ eV). However, its metal contribution is
+favorable ($-0.40$ eV), whereas site 4 has a substantial reorganization
+penalty ($+0.49$ eV). The different response of the metal cluster therefore
+reverses the ordering expected from $E_{\rm int}$ alone and gives the
+site-6/8 carbonyl the more negative binding energy. {The negative metal
+term means that the isolated \ce{Pt5Ge5} fragment at the geometry it adopts in
+the site-6/8 carbonyl is 0.40 eV lower in energy than the isolated starting
+reference. \textcolor{cyan}{Aqui podriamos resaltar que $BE_{\rm ad}(\ce{CO}) \neq E_{\mathrm{int}}$.} Thus, the binding energy includes stabilization of the metal
+structure as it adopts the carbonyl geometry.} Thus, the derivative series
+shows that a strong \ce{CO} binding energy can arise either from a more
+{favorable frozen-fragment interaction}, as in \ce{Pt6Ge4} and \ce{Pt4Ge6}, or from a
+favorable structural response, as in \ce{Pt5Ge5}.}
+
+\begin{table}[H]
+\begin{center}
+\caption{{Interaction and fragment-reorganization terms for selected strong
+and weak \ce{CO}-binding minima obtained from the derivative models. All
+decomposed terms use electronic energies and are reported in eV. The \ce{Pt10}
+entries are triplets and the Pt--Ge entries are singlets. Each
+isolated-cluster reference has the starting geometry and multiplicity used for
+the corresponding binding energy. The final $BE_{\rm ad}(\ce{CO})$ column includes the
+zero-point correction. The negative metal term for the \ce{Pt10} site-6
+trajectory reflects relaxation toward a lower \ce{Pt10} isomer.}}
+\label{tab:tfg_interaction_deformation}
+%\scriptsize
+\begin{tabular}{lclrrrrr}
+\toprule
+{System} & {$2S+1$} & {Site(s)} & {$\Delta E_{\rm elec}$} &
+{$E_{\rm int}$} & {$E_{\rm reorg}^{\rm metal}$} &
+{$E_{\rm reorg}^{\ce{CO}}$} & {$BE_{\rm ad}(\ce{CO})$} \\
+\midrule
+\ce{Pt10} & 3 & 6   & -2.74 & -2.71 & -0.06 & 0.03 & -2.66 \\
+\ce{Pt10} & 3 & 1/9 & -2.24 & -2.46 &  0.20 & 0.02 & -2.16 \\
+\midrule
+\ce{Pt6Ge4^{der}} & 1 & 2   & -2.33 & -2.70 &  0.35 & 0.03 & -2.25 \\
+\ce{Pt6Ge4^{der}} & 1 & 5/7 & -1.63 & -1.91 &  0.27 & 0.02 & -1.57 \\
+\midrule
+\ce{Pt5Ge5^{der}} & 1 & 6/8 & -2.15 & -1.78 & -0.40 & 0.02 & -2.08 \\
+\ce{Pt5Ge5^{der}} & 1 & 4   & -1.41 & -1.92 &  0.49 & 0.02 & -1.34 \\
+\midrule
+\ce{Pt4Ge6^{der}} & 1 & 5/7 & -1.53 & -1.89 &  0.34 & 0.02 & -1.46 \\
+\ce{Pt4Ge6^{der}} & 1 & 1   & -1.12 & -1.66 &  0.52 & 0.02 & -1.05 \\
+\bottomrule
+\end{tabular}
+
+\medskip
+\parbox{0.94\linewidth}{\footnotesize
+After removal of CO from the site-6 complex, full relaxation gives another
+triplet minimum with $E_{\rm elec}=-1194.30034094$~$E_h$ and
+ZPVE $=0.006430$~$E_h$. It lies 0.15~eV below the orbital-stable
+\ce{Pt10^{der}} isomer used as the adsorption reference when zero-point
+energies are included. {This result shows reorganization toward a
+lower-energy isomer following \ce{CO} adsorption.}}
+\end{center}
+\end{table}
+
+{Overall, the derivative results show that the final \ce{CO} binding
+energy is a balance between the \blue{frozen-fragment interaction} and the
+structural response of the cluster \textcolor{cyan}{to adapt to the new environment?}. \blue{The frozen-fragment interaction} and metal
+reorganization act in the same direction for the selected \ce{Pt4Ge6} sites. For
+\ce{Pt6Ge4}, the \blue{frozen-fragment interaction} favors the stronger carbonyl, while the
+larger reorganization penalty partly reduces this advantage. Their competition
+determines the ordering of the selected \ce{Pt5Ge5} minima. Thus,
+$E_{\mathrm{int}}$ alone does not define the binding energy, because relaxation
+of the metal cluster can reduce or reverse the interaction-based ordering.}
+
