@@ -24,6 +24,10 @@
 \usepgfplotslibrary{groupplots}
 \pgfplotsset{compat=1.18}
 \usepackage{soul}
+% Temporary text-only compilation: omit complete figure environments.
+% Remove these two lines to compile the figures again.
+%\usepackage{environ}
+%\RenewEnviron{figure}[1][]{ }
 
 \usepackage{siunitx}
 \DeclareSIUnit\angstromunit{\text{\AA}}
