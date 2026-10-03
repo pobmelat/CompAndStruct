@@ -114,27 +114,30 @@ decomposed terms use electronic energies and are reported in eV. The \ce{Pt10}
 entries are triplets and the Pt--Ge entries are singlets. Each
 isolated-cluster reference has the starting geometry and multiplicity used for
 the corresponding binding energy. The final $BE_{\rm ad}(\ce{CO})$ column includes the
-zero-point correction. The negative metal term for the \ce{Pt10} site-6
-trajectory reflects relaxation toward a lower \ce{Pt10} isomer.}}
+zero-point correction. The $\rho_{\rm BCP}$ column gives the electron density
+at the Pt--C bond critical point of each optimized carbonyl, in $e\,a_0^{-3}$. The
+negative metal term for the \ce{Pt10} site-6 trajectory reflects relaxation
+toward a lower \ce{Pt10} isomer.}}
 \label{tab:tfg_interaction_deformation}
 %\scriptsize
-\begin{tabular}{lclrrrrr}
+\begin{tabular}{lclrrrrrr}
 \toprule
 {System} & {$2S+1$} & {Site(s)} & {$\Delta E_{\rm elec}$} &
 {$E_{\rm int}$} & {$E_{\rm reorg}^{\rm metal}$} &
-{$E_{\rm reorg}^{\ce{CO}}$} & {$BE_{\rm ad}(\ce{CO})$} \\
+{$E_{\rm reorg}^{\ce{CO}}$} & {$BE_{\rm ad}(\ce{CO})$} &
+{$\rho_{\rm BCP}$} \\
 \midrule
-\ce{Pt10} & 3 & 6   & -2.74 & -2.71 & -0.06 & 0.03 & -2.66 \\
-\ce{Pt10} & 3 & 1/9 & -2.24 & -2.46 &  0.20 & 0.02 & -2.16 \\
+\ce{Pt10} & 3 & 6   & -2.74 & -2.71 & -0.06 & 0.03 & -2.66 & 0.199 \\
+\ce{Pt10} & 3 & 1/9 & -2.24 & -2.46 &  0.20 & 0.02 & -2.16 & 0.196 \\
 \midrule
-\ce{Pt6Ge4^{der}} & 1 & 2   & -2.33 & -2.70 &  0.35 & 0.03 & -2.25 \\
-\ce{Pt6Ge4^{der}} & 1 & 5/7 & -1.63 & -1.91 &  0.27 & 0.02 & -1.57 \\
+\ce{Pt6Ge4^{der}} & 1 & 2   & -2.33 & -2.70 &  0.35 & 0.03 & -2.25 & 0.194 \\
+\ce{Pt6Ge4^{der}} & 1 & 5/7 & -1.63 & -1.91 &  0.27 & 0.02 & -1.57 & 0.182 \\
 \midrule
-\ce{Pt5Ge5^{der}} & 1 & 6/8 & -2.15 & -1.78 & -0.40 & 0.02 & -2.08 \\
-\ce{Pt5Ge5^{der}} & 1 & 4   & -1.41 & -1.92 &  0.49 & 0.02 & -1.34 \\
+\ce{Pt5Ge5^{der}} & 1 & 6/8 & -2.15 & -1.78 & -0.40 & 0.02 & -2.08 & 0.173 \\
+\ce{Pt5Ge5^{der}} & 1 & 4   & -1.41 & -1.92 &  0.49 & 0.02 & -1.34 & 0.162 \\
 \midrule
-\ce{Pt4Ge6^{der}} & 1 & 5/7 & -1.53 & -1.89 &  0.34 & 0.02 & -1.46 \\
-\ce{Pt4Ge6^{der}} & 1 & 1   & -1.12 & -1.66 &  0.52 & 0.02 & -1.05 \\
+\ce{Pt4Ge6^{der}} & 1 & 5/7 & -1.53 & -1.89 &  0.34 & 0.02 & -1.46 & 0.171 \\
+\ce{Pt4Ge6^{der}} & 1 & 1   & -1.12 & -1.66 &  0.52 & 0.02 & -1.05 & 0.181 \\
 \bottomrule
 \end{tabular}
 
@@ -149,6 +152,17 @@ lower-energy isomer following \ce{CO} adsorption.}}
 \end{center}
 \end{table}
 
+The Pt--C bond-critical-point densities in Table~\ref{tab:tfg_interaction_deformation}
+provide a local description of the optimized carbonyls. For the selected
+\ce{Pt10}, \ce{Pt6Ge4}, and \ce{Pt5Ge5} pairs, the more strongly bound
+carbonyl also has the larger $\rho_{\rm BCP}$. The \ce{Pt4Ge6} pair shows the
+opposite order: site 1 has a larger $\rho_{\rm BCP}$ than site 5/7 (0.181
+versus 0.171 $e\,a_0^{-3}$), but its binding energy is less negative. This
+site also has a less stabilizing frozen-fragment interaction and a larger
+metal-reorganization penalty. Thus, $\rho_{\rm BCP}$ describes the local
+Pt--C bond in the optimized complex, while $BE_{\rm ad}(\ce{CO})$ also
+contains the structural response of the cluster.
+
 {Overall, the derivative results show that the final \ce{CO} binding
 energy is a balance between the \blue{frozen-fragment interaction} and the
 structural response of the cluster \textcolor{cyan}{to adapt to the new environment?}. \blue{The frozen-fragment interaction} and metal
@@ -158,4 +172,3 @@ larger reorganization penalty partly reduces this advantage. Their competition
 determines the ordering of the selected \ce{Pt5Ge5} minima. Thus,
 $E_{\mathrm{int}}$ alone does not define the binding energy, because relaxation
 of the metal cluster can reduce or reverse the interaction-based ordering.}
-
