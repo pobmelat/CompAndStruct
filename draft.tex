@@ -1,13 +1,10 @@
-\documentclass[11pt]{article}
-\usepackage[super,sort&compress,comma]{natbib} 
-%\usepackage{natbib}
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[pdflatex,sn-basic,Numbered]{sn-jnl}
 \usepackage[version=3]{mhchem}
-\usepackage[left=2.3cm, right=3cm, top=1.785cm, bottom=2.0cm]{geometry}
 \usepackage{graphicx} 
-\usepackage[format=plain,justification=justified,singlelinecheck=false,font={stretch=1.125,sf},labelfont=bf,labelsep=space]{caption}
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
-\usepackage[dvipsnames]{xcolor}
+\usepackage{xcolor}
 \usepackage[normalem]{ulem}
 \usepackage{setspace}
 \usepackage{hyperref}
@@ -18,9 +15,14 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{array}
-\usepackage{multicol,caption,listings}
-\usepackage{authblk}
-\usepackage{float} 
+\usepackage{multicol,listings}
+\usepackage{adjustbox}
+\usepackage{etoolbox}
+% Existing tables handle their own width; avoid the class's automatic
+% threeparttable wrapper, which conflicts with adjustbox.
+\let\table\tableorg
+\let\endtable\endtableorg
+\AtBeginEnvironment{table}{\centering\fontsize{8bp}{9.5bp}\selectfont}
 \usepackage{pgfplots}
 \usepgfplotslibrary{groupplots}
 \pgfplotsset{compat=1.18}
@@ -46,7 +48,6 @@
 %HIDE column
 \newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
 
-\onehalfspacing{}
 
 \newlength\Colsep
 \setlength\Colsep{10pt}
@@ -60,30 +61,36 @@ ex-pe-ri-men-tal me-a-su-ra-ble a-vo-ga-dro}
 %\author{Rafael Grande-Aztatzi$^{*}$, , Jesus M. Ugalde and Jose M. Mercero$^{*}$}
 
 %
+\begin{document}
+
 \title{How Composition and Cluster Structure Influence CO Adsorption in \ce{Pt} and Pt--Ge Clusters}
 %\title{Composition and Structural Effects on CO Binding in \ce{Pt10} and Pt--Ge Clusters}
 %\title{Interplay of Composition, Bonding, and Structural Reorganization in Pt10 and Pt--Ge clusters}
 %\title{Disentangling binding energies in the interaction between Pt10 and Pt-Ge clusters: composition, structural reorganization and spin state effects". O "Is there something better than binding energie? Seach toward local descriptors for CO adsorption in Pt10 and Pt-Ge clusters" Reply}
 
 
-\author[1,2,3]{Andoni Ugartemendia}
-\author[1,2]{Idoia Camara}
-\author[1,2]{Ramón M. Bergua}
-\author[1,2,$^*$]{Elisa Jimenez-Izal}
-\author[1,2,$^*$]{Jose M. Mercero }
-\affil[1]{\small Donostia International Physics Center (DIPC), 20018 Donostia, Euskadi, Spain}
-\affil[2]{\small Kimika Fakultatea, Euskal Herriko Unibertsitatea (UPV/EHU), P.K. 1072, 20080 Donostia, Euskadi, Spain}
-\affil[3]{\small Istituto Nanoscienze, CNR, S3, via Campi 213/A, 41125 Modena, Italy}
-%\affil[4]{\small IKERBASQUE, Basque Foundation for Science, 48013 Bilbao, Euskadi, Spain}
-%\affil[5]{\small  Escuela de Ingeniería y Ciencias, Tecnológico de Monterrey, Av. Eugenio Garza Sada 2501, 64849 Monterrey, Nuevo León, México.}
+\author[1,2,3]{\fnm{Andoni} \sur{Ugartemendia}}
+\author[1,2]{\fnm{Idoia} \sur{Camara}}
+\author[1,2]{\fnm{Ramón M.} \sur{Bergua}}
+\author*[1,2]{\fnm{Elisa} \sur{Jimenez-Izal}}
+% Add the confirmed corresponding-author e-mail with \email{...}.
+\author*[1,2]{\fnm{Jose M.} \sur{Mercero}}
+% Add the confirmed corresponding-author e-mail with \email{...}.
 
+\affil[1]{\orgname{Donostia International Physics Center (DIPC)},
+\orgaddress{\city{Donostia}, \postcode{20018}, \state{Euskadi}, \country{Spain}}}
+\affil[2]{\orgdiv{Kimika Fakultatea},
+\orgname{Euskal Herriko Unibertsitatea (UPV/EHU)},
+\orgaddress{\street{P.K. 1072}, \city{Donostia}, \postcode{20080},
+\state{Euskadi}, \country{Spain}}}
+\affil[3]{\orgname{Istituto Nanoscienze, CNR, S3},
+\orgaddress{\street{via Campi 213/A}, \city{Modena}, \postcode{41125}, \country{Italy}}}
 
 \graphicspath{{Figures/}}
 
-\begin{document}	
-\maketitle
-\tableofcontents
 \input{abstract}
+\keywords{Platinum clusters, Pt--Ge clusters, CO adsorption, Chemical bonding, Effective coordination number, Structural reorganization}
+\maketitle
 
 \section{Introduction}
 \input{intro}
@@ -97,7 +104,7 @@ ex-pe-ri-men-tal me-a-su-ra-ble a-vo-ga-dro}
 \input{co_binding_energies}
 %\input{local_environment}
 %\input{interaction_fragment_reorganization}
-\input{bitxo}
+\input{res2}
 \section{Conclusions}
 \input{conclusions}
 
@@ -110,13 +117,21 @@ the allocation of computational resources. We also acknowledge the computer
 resources at MareNostrum and the technical support provided by the Barcelona
 Supercomputing Center (Grant No. QHS-2026--1--0028).
 
-%\section{Bibliography}
+% The numbered Springer bibliography style is selected by sn-jnl.
 \bibliography{refs,bib}
-\bibliographystyle{rsc}
-%\bibliographystyle{rsc} %the RSC$^'$s .bst file
 
 \clearpage
-\section{Supporting Information}
+% Keep SI attached during revision; prepare a separate PDF for submission.
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\setcounter{equation}{0}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\theHtable}{supp.\arabic{table}}
+\renewcommand{\theHfigure}{supp.\arabic{figure}}
+\renewcommand{\theHequation}{supp.\arabic{equation}}
+\section*{Supporting Information}
 \input{supporting}
 
 \end{document}
