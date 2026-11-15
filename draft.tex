@@ -6,6 +6,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{xcolor}
 \usepackage[normalem]{ulem}
+\let\originalsout\sout
+\renewcommand{\sout}[1]{\textcolor{red}{\originalsout{#1}}}
 \usepackage{setspace}
 \usepackage{hyperref}
 \usepackage{threeparttable}
