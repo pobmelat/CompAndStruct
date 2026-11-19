@@ -1,0 +1,69 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[pdflatex,sn-basic,Numbered]{sn-jnl}
+\usepackage[version=3]{mhchem}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{threeparttable}
+\usepackage{tablefootnote}
+\usepackage{longtable}
+\usepackage{hhline}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{multicol,listings}
+\usepackage{adjustbox}
+\usepackage{etoolbox}
+\let\table\tableorg
+\let\endtable\endtableorg
+\AtBeginEnvironment{table}{\centering\fontsize{8bp}{9.5bp}\selectfont}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{compat=1.18}
+\usepackage{siunitx}
+\DeclareSIUnit\angstromunit{\text{\AA}}
+\sisetup{round-mode=places}
+\usepackage{setspace}
+
+\graphicspath{{Figures/}}
+
+\begin{document}
+
+\title{Supplementary Information for: CO Adsorption on Pt and Pt--Ge Clusters: Effects of Composition, Starting Structure, and Cluster Reorganization}
+\author[1,2,3]{\fnm{Andoni} \sur{Ugartemendia}}
+\author[1,2]{\fnm{Idoia} \sur{Camara}}
+\author[1,2]{\fnm{Ramón M.} \sur{Bergua}}
+\author*[1,2]{\fnm{Elisa} \sur{Jimenez-Izal}}\email{elisa.jimenez@ehu.eus}
+\author*[1,2]{\fnm{Jose M.} \sur{Mercero}}\email{jm.mercero@ehu.eus}
+
+\affil[1]{\orgname{Donostia International Physics Center (DIPC)},
+\orgaddress{\city{Donostia}, \postcode{20018}, \state{Euskadi}, \country{Spain}}}
+\affil[2]{\orgdiv{Kimika Fakultatea},
+\orgname{Euskal Herriko Unibertsitatea (EHU)},
+\orgaddress{\street{P.K. 1072}, \city{Donostia}, \postcode{20080},
+\state{Euskadi}, \country{Spain}}}
+\affil[3]{\orgname{Istituto Nanoscienze, CNR, S3},
+\orgaddress{\street{via Campi 213/A}, \city{Modena}, \postcode{41125}, \country{Italy}}}
+\maketitle
+
+\noindent\textit{Journal: Journal of Cluster Science}
+
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\setcounter{equation}{0}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\theHtable}{supp.\arabic{table}}
+\renewcommand{\theHfigure}{supp.\arabic{figure}}
+\renewcommand{\theHequation}{supp.\arabic{equation}}
+
+%\section*{Supporting Information}
+\input{supporting}
+
+\clearpage
+\bibliography{refs,bib}
+
+\end{document}

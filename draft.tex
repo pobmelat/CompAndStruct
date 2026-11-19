@@ -20,6 +20,7 @@
 \usepackage{multicol,listings}
 \usepackage{adjustbox}
 \usepackage{etoolbox}
+\usepackage{placeins}
 % Existing tables handle their own width; avoid the class's automatic
 % threeparttable wrapper, which conflicts with adjustbox.
 \let\table\tableorg
@@ -65,19 +66,14 @@ ex-pe-ri-men-tal me-a-su-ra-ble a-vo-ga-dro}
 %
 \begin{document}
 
-\title{How Composition and Cluster Structure Influence CO Adsorption in \ce{Pt} and Pt--Ge Clusters}
-%\title{Composition and Structural Effects on CO Binding in \ce{Pt10} and Pt--Ge Clusters}
-%\title{Interplay of Composition, Bonding, and Structural Reorganization in Pt10 and Pt--Ge clusters}
-%\title{Disentangling binding energies in the interaction between Pt10 and Pt-Ge clusters: composition, structural reorganization and spin state effects". O "Is there something better than binding energy? Search toward local descriptors for CO adsorption in Pt10 and Pt-Ge clusters" Reply}
-
+\title{CO Adsorption on Pt and Pt–Ge Clusters: Effects of Composition, Starting
+Structure, and Cluster Reorganization}
 
 \author[1,2,3]{\fnm{Andoni} \sur{Ugartemendia}}
 \author[1,2]{\fnm{Idoia} \sur{Camara}}
 \author[1,2]{\fnm{Ramón M.} \sur{Bergua}}
-\author*[1,2]{\fnm{Elisa} \sur{Jimenez-Izal}}
-% Add the confirmed corresponding-author e-mail with \email{...}.
-\author*[1,2]{\fnm{Jose M.} \sur{Mercero}}
-% Add the confirmed corresponding-author e-mail with \email{...}.
+\author*[1,2]{\fnm{Elisa} \sur{Jimenez-Izal}}\email{elisa.jimenez@ehu.eus}
+\author*[1,2]{\fnm{Jose M.} \sur{Mercero}}\email{jm.mercero@ehu.eus}
 
 \affil[1]{\orgname{Donostia International Physics Center (DIPC)},
 \orgaddress{\city{Donostia}, \postcode{20018}, \state{Euskadi}, \country{Spain}}}
@@ -109,27 +105,26 @@ ex-pe-ri-men-tal me-a-su-ra-ble a-vo-ga-dro}
 \section{Conclusions}
 \input{conclusions}
 
+\section*{Data availability}
+The computational data supporting this study are available as a data set collection in the ioChem-BD repository at \url{https://doi.org/10.19061/iochem-bd-6-730}. The ioChem-BD platform is described in Ref.~\cite{alvarez-moreno2015iochemBD}.
+
 \section*{Acknowledgements}
 
 This work was supported by Grant No. PID2023--152377OB-I00, funded by
 MCIN/AEI/10.13039/501100011033, and by Gobierno Vasco-Eusko Jaurlaritza
-(Grant No. IT2067--26). We also acknowledge the Basque Government's BERC and the Severo Ochoa Centre of Excellence Programmes (CEX2024-001491-S, funded by MICIU/AEI/10.13039/501100011033). A.U. gratefully thanks Gobierno Vasco-Eusko Jaurlaritza for his former predoctoral grant, as well as Euskal Herriko Unibertsitatea (EHU) for his Postdoctoral Fellowship (Grant No. POSTUPV24/96). We acknowledge DIPC and SGI-IZO-SGIker (UPV/EHU) for the allocation of computational resources. We also acknowledge the computer resources at MareNostrum and the technical support provided by the Barcelona Supercomputing Center (Grants No. QHS-2025--3--0038 and QHS-2026--1--0028). 
+(Grant No. IT2067--26). We also acknowledge the Basque Government's BERC and the Severo Ochoa Centre of Excellence Programmes (CEX2024-001491-S, funded by MICIU/AEI/10.13039/501100011033).
+A.U. acknowledges the University of the Basque Country (EHU) for his postdoctoral fellowship (Grant No. POSTUPV24/96). We acknowledge DIPC and SGI-IZO-SGIker (UPV/EHU) for the allocation of computational resources. We also acknowledge the computer resources at MareNostrum and the technical support provided by the Barcelona Supercomputing Center (Grants No. QHS-2025--3--0038 and QHS-2026--1--0028). 
+
+\section*{Conflict of interest}
+The authors declare that they have no conflict of interest.
 
 % The numbered Springer bibliography style is selected by sn-jnl.
 \bibliography{refs,bib}
 
 \clearpage
-% Keep SI attached during revision; prepare a separate PDF for submission.
-\setcounter{table}{0}
-\setcounter{figure}{0}
-\setcounter{equation}{0}
-\renewcommand{\thetable}{S\arabic{table}}
-\renewcommand{\thefigure}{S\arabic{figure}}
-\renewcommand{\theequation}{S\arabic{equation}}
-\renewcommand{\theHtable}{supp.\arabic{table}}
-\renewcommand{\theHfigure}{supp.\arabic{figure}}
-\renewcommand{\theHequation}{supp.\arabic{equation}}
-\section*{Supporting Information}
-\input{supporting}
+\section*{Graphical Abstract}
+\begin{center}
+\includegraphics[width=8cm,height=3cm,keepaspectratio]{GraphAbs/graphical_abstract_v3e.pdf}
+\end{center}
 
 \end{document}

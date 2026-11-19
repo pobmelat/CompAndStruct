@@ -1,4 +1,4 @@
-\subsection*{Effective coordination number}
+\section*{Effective coordination number}
 \label{sec:supporting_econ_definition}
 
 The local environment of each Pt adsorption site was characterized with
@@ -10,7 +10,7 @@ distance
 s_{ij}=\frac{d_{ij}}{r_i^{\rm cov}+r_j^{\rm cov}},
 \end{equation}
 where \(d_{ij}\) is the distance between the two atoms and \(r^{\rm cov}\) are
-covalent radii reported by Cordero et al\cite{cordero:covalent-radii:2008}.
+covalent radii reported by Cordero et al.\cite{cordero:covalent-radii:2008}.
 For the metal atoms considered here, we used
 \(r_{\ce{Pt}}=1.36~\si{\angstromunit}\) and
 \(r_{\ce{Ge}}=1.20~\si{\angstromunit}\). Each neighbor then contributes with
@@ -40,8 +40,8 @@ fraction is \(x_{\rm Ge}^{0}=ECoN_{\rm Ge}^{0}/ECoN_{\rm total}^{0}\), where
 the superscript 0 denotes the bare-cluster geometry. A superscript \(\ce{CO}\)
 denotes a descriptor evaluated for the optimized carbonyl after adsorption and
 relaxation.
-
-\subsection*{Additional cluster and carbonyl data}
+\newpage
+\section*{Additional cluster and carbonyl data}
 
 \begin{table}[htbp]
 \centering
@@ -115,8 +115,7 @@ Each $BE_{\rm ad}(\ce{CO})$ is referenced to free singlet
 The corresponding GM data are reported separately in
 Supporting Table~\ref{tab:tfg_gm_bimetallic_adsorption_descriptors}. Site
 labels identify the initial Pt placements. Grouped labels denote positions
-represented by the same optimized result, either because they are equivalent
-in the starting structure or because they converge to the same minimum.
+represented by the same optimized result, because they converge to the same minimum.
 }\label{tab:tfg_bimetallic_adsorption_descriptors}
 \renewcommand{\arraystretch}{0.92}
 \begin{adjustbox}{max width=\linewidth}
@@ -159,6 +158,7 @@ each composition.}
 \end{figure}
 
 \begin{table}[htbp]
+\centering
 \caption{Hoppe ECoN values for each Pt atom in the two optimized \ce{Pt10}
 structures compared in Section~3.2. Only Pt neighbors are included. The
 \ce{Pt10^{GM}} structure is a nonet, whereas \ce{Pt10^{der}} is a triplet.
@@ -221,6 +221,7 @@ $\Delta ECoN=ECoN^{\ce{CO}}-ECoN^{0}$ is calculated before rounding.}
 \end{adjustbox}
 \end{table}
 
+\clearpage
 \subsection*{AdNDP analysis}
 
 The previously reported AdNDP analysis of \ce{Pt10^{GM}} identified 30
@@ -231,7 +232,19 @@ $0.93|e|$). For \ce{Pt5Ge5^{GM}}, the reported analysis found 15 Pt-centered
 1c--2e elements (ON = $1.84|e|$) and 20 Pt--Ge 2c--2e elements (ON =
 $1.86|e|$)\cite{ugartemendia:2022}.
 
-\begin{table}[htbp]
+For triplet \ce{Pt10}, the 1c and 3c searches retained spin-resolved
+elements with ON values of at least 0.960 (input threshold: 1.040).
+The residual densities were 0.713 and 0.873 electrons for the alpha and beta
+components of \ce{Pt10}, respectively; 0.016 electrons for \ce{Pt5Ge5};
+0.526 electrons for \ce{Pt6Ge4}; and 0.015 electrons for \ce{Pt4Ge6}.
+For triplet \ce{Pt10}, the two additional alpha 3c elements are centered on
+Pt(2)--Pt(3)--Pt(7) and Pt(5)--Pt(6)--Pt(10), with ON values of 0.994 and
+0.995. The thresholds for the \ce{Pt5Ge5} decomposition were 0.180 and 0.200,
+for the 1c, and  2c searches, respectively. The 1c and 2c
+thresholds were 0.180 and 0.200 for \ce{Pt6Ge4}. For \ce{Pt4Ge6}, the 1c and
+2c search thresholds were 0.220 and 0.280, respectively.
+
+\begin{table}[!htbp]
 \caption{Summary of the AdNDP decompositions for the derivative models.
 The \ce{Pt5Ge5} row reports model E. For rows with several element types,
 the ON ranges follow the same order as the listed elements. ON denotes the
@@ -269,25 +282,11 @@ components were paired to obtain their combined occupations.}
 	$\times$ Pt--Ge 2c--2e\\3 $\times$ Pt--Pt 2c--2e\end{tabular} &
 	\begin{tabular}[t]{@{}l@{}}1.820--1.970\\1.842--1.983\\1.873--1.905\end{tabular}
 			& localized 1c and 2c bonding \\\hline
-\ce{Pt6Ge4} & 1 & \begin{tabular}[t]{@{}l@{}}12 $\times$ Pt-centered 1c--2e\\5 $\times$ Pt--Pt 2c--2e\\21 $\times$ Pt--Ge 2c--2e\end{tabular} & \begin{tabular}[t]{@{}l@{}}1.916--1.968\\1.975--1.983\\1.894--1.982\end{tabular} & localized Pt--Pt/Pt--Ge bonding \\\hline
-\ce{Pt4Ge6} & 1 & \begin{tabular}[t]{@{}l@{}}12 $\times$ Pt-centered 1c--2e\\2 $\times$ Pt--Pt 2c--2e\\15 $\times$ Pt--Ge 2c--2e\\3 $\times$ Ge--Ge 2c--2e\end{tabular} & \begin{tabular}[t]{@{}l@{}}1.841--1.978\\1.903--1.919\\1.865--1.977\\1.813--1.861\end{tabular} & localized one- and two-center bonding \\
+\ce{Pt6Ge4} & 1 & \begin{tabular}[t]{@{}l@{}}25 $\times$ Pt-centered 1c--2e\\3 $\times$ Pt--Pt 2c--2e\\12 $\times$ Pt--Ge 2c--2e\end{tabular} & \begin{tabular}[t]{@{}l@{}}1.823--1.968\\1.806--1.923\\1.808--1.964\end{tabular} & localized 1c and 2c elements \\\hline
+\ce{Pt4Ge6} & 1 & \begin{tabular}[t]{@{}l@{}}20 $\times$ Pt-centered 1c--2e\\11 $\times$ Pt--Ge 2c--2e\\4 $\times$ Ge--Ge 2c--2e\end{tabular} & \begin{tabular}[t]{@{}l@{}}1.793--1.978\\1.727--1.811\\1.728--1.861\end{tabular} & localized 1c and 2c elements \\
 			\bottomrule
 \end{tabular}
 \end{adjustbox}
-\parbox{0.96\linewidth}{\footnotesize For \ce{Pt10}, the listed occupations
-refer to individual spin channels and are therefore close to one. The residual
-alpha and beta densities are 0.713 and 0.873 electrons, respectively. The
-threshold parameter was 1.040 for the 1c and 3c searches, corresponding to a
-minimum accepted spin-resolved ON of 0.960. Nineteen alpha and beta 3c
-elements involve identical sets of Pt atoms; their summed occupations are
-listed as paired 3c values. The remaining alpha 3c elements are located on
-Pt(2)--Pt(3)--Pt(7) and Pt(5)--Pt(6)--Pt(10), with ON values of 0.994 and
-0.995, respectively. For the \ce{Pt5Ge5} model E decomposition, the 1c and
-2c thresholds were both 0.180; the residual density was 0.016 electrons.
-The 1c--2e and 2c--2e labels identify the AdNDP element types; the actual
-occupations are the ON values listed in the table and are not exactly two.
-The 1c and 2c parameters were 0.100 and 0.140 for \ce{Pt6Ge4},
-and 0.160 and 0.250 for \ce{Pt4Ge6}.}
 \end{table}
 
 \begin{table}[htbp]
@@ -299,10 +298,9 @@ $BE_{\rm ad}(\ce{CO})$ uses free singlet \ce{CO} and the
 corresponding bare GM cluster with the same multiplicity.
 Site labels follow consecutive Pt numbering
 within each GM cluster. Grouped labels denote initial sites represented by
-the same optimized carbonyl.}
-The same labels are used in Supporting
+the same optimized carbonyl. The same labels are used in Supporting
 Tables~\ref{tab:tfg_gm_ptge_econ_pre_descriptors} and
-\ref{tab:tfg_gm_ptge_econ_descriptors}.
+\ref{tab:tfg_gm_ptge_econ_descriptors}.}
 \label{tab:tfg_gm_bimetallic_adsorption_descriptors}
 %\scriptsize
 \begin{adjustbox}{max width=\linewidth}
@@ -375,10 +373,10 @@ Table~\ref{tab:tfg_gm_bimetallic_adsorption_descriptors}.}
 \caption{Local Hoppe ECoN descriptors for the Pt atom bound to \ce{CO} in
 the optimized atom-substitution Pt--Ge carbonyls. The superscript \ce{CO}
 distinguishes these final-state descriptors from the pre-adsorption values in
-Table~\ref{tab:tfg_crossed_ptge_econ_descriptors}.
+Table 1 in the main text.
 Site labels retain the derivative-model indices shown in
 Supporting Figure~\ref{fig:tfg_site_numbering}, matching the pre-adsorption
-labels in Table~\ref{tab:tfg_crossed_ptge_econ_descriptors}. Only metal neighbors are
+labels in Table 1 in the main text. Only metal neighbors are
 included, with
 $ECoN_{\rm total}^{\ce{CO}}=ECoN_{\rm Pt}^{\ce{CO}}+ECoN_{\rm Ge}^{\ce{CO}}$
 and
